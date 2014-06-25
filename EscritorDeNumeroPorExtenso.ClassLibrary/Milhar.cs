@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
@@ -24,23 +25,27 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 
         public override string ToString()
         {
-            return EhDoCasoEspecialDoPrimeiroMilhar() ? Sulfixo : LigaClasses(Ordens + " " + Sulfixo, ClasseAnterior);
+            return EhDoCasoEspecialDoPrimeiroMilhar ? Sulfixo : LigaClasses(Ordens + " " + Sulfixo, ClasseAnterior);
         }
 
         private string LigaClasses(string ordem, IClasse classeAnterior)
         {
-            return (EhDoCasoEspecialDoPrimeiroMilhar() ? (ordem + " " + classeAnterior) : ordem)
-                + (TudoZero(classeAnterior) ? string.Empty : (" e " + classeAnterior));
+            return (EhDoCasoEspecialDoPrimeiroMilhar ? (ordem + " " + classeAnterior) : ordem)
+                + (TudoZero ? string.Empty : (" e " + classeAnterior));
         }
 
-        public bool EhDoCasoEspecialDoPrimeiroMilhar()
+        private bool EhDoCasoEspecialDoPrimeiroMilhar
         {
-            return Ordens.Algarismos.First() == 1 && Ordens.Algarismos.Length == 1;
+            get { return Ordens.Algarismos.First() == 1 && Ordens.Algarismos.Length == 1; }
         }
 
-        public bool TudoZero(IClasse ordem)
+        private bool TudoZero
         {
-            return ordem.Algarismos.Skip(1).All(x => x == 0);
+            get
+            {
+                return Array.TrueForAll(ClasseAnterior.Algarismos, x => x == 0);
+                //ClasseAnterior.Algarismos.Skip(1).All(x => x == 0);
+            }
         }
     }
 }

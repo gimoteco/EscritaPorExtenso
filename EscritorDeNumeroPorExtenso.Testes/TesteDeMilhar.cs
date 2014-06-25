@@ -11,7 +11,7 @@ namespace EscritorDeNumeroPorExtenso.Testes
         {
             Assert.AreEqual("mil", new Milhar(new Unidade(1)).ToString());
         }
-        
+
         [TestMethod]
         public void DeveGerarNumeroDezMil()
         {

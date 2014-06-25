@@ -1,6 +1,6 @@
 namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
-    public class PrimeiraClasse: IClasse
+    public class PrimeiraClasse : IClasse
     {
         public IOrdem Ordem { get; set; }
         public string Sulfixo { get; private set; }
@@ -13,6 +13,11 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
         public PrimeiraClasse(IOrdem ordem)
         {
             Ordem = ordem;
+        }
+
+        public override string ToString()
+        {
+            return Ordem.ToString();
         }
     }
 }

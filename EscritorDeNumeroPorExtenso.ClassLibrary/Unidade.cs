@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
-    public class Unidade: IOrdem
+    public class Unidade : IOrdem
     {
         public int Algarismo { get; set; }
 
@@ -27,7 +27,7 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 
         public int[] Algarismos
         {
-            get { return new[] {Algarismo}; }
+            get { return new[] { Algarismo }; }
         }
     }
 }
