@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
-    public class Unidade
+    public class Unidade: IOrdem
     {
         public int Algarismo { get; set; }
 
         private static readonly Dictionary<int, string> _nomeDosAlgarismos = new Dictionary<int, string>()
         {
-                {1, "um"}, {2, "dois"}, {3, "três"},
+                {0, "zero"}, {1, "um"}, {2, "dois"}, {3, "três"},
                 {4, "quatro"}, {5, "cinco"}, {6, "seis"},
                 {7, "sete"}, {8, "oito"}, {9, "nove"},
         };
@@ -23,6 +23,11 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
         public override string ToString()
         {
             return _nomeDosAlgarismos[Algarismo];
+        }
+
+        public int[] Algarismos
+        {
+            get { return new[] {Algarismo}; }
         }
     }
 }

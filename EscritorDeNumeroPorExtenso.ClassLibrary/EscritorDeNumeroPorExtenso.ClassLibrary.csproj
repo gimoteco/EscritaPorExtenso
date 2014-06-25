@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Centena.cs" />
     <Compile Include="Dezena.cs" />
+    <Compile Include="IOrdem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unidade.cs" />
   </ItemGroup>

@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Linq;
 
 namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
-    public class Dezena
+    public class Dezena : IOrdem
     {
         private static readonly Dictionary<int, string> _nomeDosAlgarismos = new Dictionary<int, string>()
         {
+            {1, "dez"},
             {2, "vinte"},
             {3, "trinta"},
             {4, "quarenta"},
@@ -19,7 +22,6 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 
         private static readonly Dictionary<int, string> _nomeDosAlgarismosDaPrimeiraDezena = new Dictionary<int, string>()
         {
-            {0, "dez"},
             {1, "onze"},
             {2, "doze"},
             {3, "treze"},
@@ -31,28 +33,36 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
             {9, "dezenove"},
         };
 
+        public IOrdem OrdemAnterior { get; set; }
         public int Algarismo { get; set; }
 
-        public Dezena(int algarismo)
+        public Dezena(int algarismo, IOrdem ordemAnterior = null)
         {
+            OrdemAnterior = ordemAnterior ?? new Unidade(0);
             Algarismo = algarismo;
         }
 
         public override string ToString()
         {
-            return _nomeDosAlgarismos[Algarismo];
+            return EhDoCasoEspecialDeDezADezenove
+                ? _nomeDosAlgarismosDaPrimeiraDezena[OrdemAnterior.Algarismos.First()]
+                : LigaOrdens(_nomeDosAlgarismos[Algarismo], OrdemAnterior);
         }
 
-        public string Com(Unidade unidade)
+        private static string LigaOrdens(string nomeDoAlgarismo, IOrdem ordemAnterior)
         {
-            return EhDoCasoEspecialDeDezADezenove
-                ? _nomeDosAlgarismosDaPrimeiraDezena[unidade.Algarismo]
-                : _nomeDosAlgarismos[Algarismo] + " e " + unidade;
+            return nomeDoAlgarismo + ((ordemAnterior.Algarismos.Sum() == 0) ? string.Empty : (" e " + ordemAnterior));
         }
 
         public bool EhDoCasoEspecialDeDezADezenove
         {
-            get { return Algarismo == 1; }
+            get { return Algarismo == 1 && Algarismos.Sum() > 1; }
         }
+
+        public int[] Algarismos
+        {
+            get { return new[] { Algarismo }.Concat(OrdemAnterior.Algarismos).ToArray(); }
+        }
+
     }
 }

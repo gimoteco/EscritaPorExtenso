@@ -9,22 +9,22 @@ namespace EscritorDeNumeroPorExtenso.Testes
         [TestMethod]
         public void DeveGerarNumeroDeUmaDezenaSimples()
         {
-            Assert.AreEqual("dez", new Dezena(1).Com(new Unidade(0)));
+            Assert.AreEqual("dez", new Dezena(1).ToString());
         }
 
         [TestMethod]
         public void DeveGerarUmaDezenaDaPrimeiraDezena()
         {
-            Assert.AreEqual("onze", new Dezena(1).Com(new Unidade(1)));
-            Assert.AreEqual("doze", new Dezena(1).Com(new Unidade(2)));
-            Assert.AreEqual("dezenove", new Dezena(1).Com(new Unidade(9)));
+            Assert.AreEqual("onze", new Dezena(1, new Unidade(1)).ToString());
+            Assert.AreEqual("doze", new Dezena(1, new Unidade(2)).ToString());
+            Assert.AreEqual("dezenove", new Dezena(1, new Unidade(9)).ToString());
         }
 
         [TestMethod]
         public void DeveGerarUmaDezenaQualquer()
         {
-            Assert.AreEqual("vinte e um", new Dezena(2).Com(new Unidade(1)));
-            Assert.AreEqual("cinquenta e um", new Dezena(5).Com(new Unidade(1)));
+            Assert.AreEqual("vinte e um", new Dezena(2, new Unidade(1)).ToString());
+            Assert.AreEqual("cinquenta e um", new Dezena(5, new Unidade(1)).ToString());
         }
     }
 }
