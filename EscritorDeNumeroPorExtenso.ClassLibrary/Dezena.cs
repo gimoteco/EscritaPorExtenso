@@ -49,9 +49,9 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
                 : LigaOrdens(_nomeDosAlgarismos[Algarismo], OrdemAnterior);
         }
 
-        private static string LigaOrdens(string nomeDoAlgarismo, IOrdem ordemAnterior)
+        private string LigaOrdens(string nomeDoAlgarismo, IOrdem ordemAnterior)
         {
-            return nomeDoAlgarismo + ((ordemAnterior.Algarismos.Sum() == 0) ? string.Empty : (" e " + ordemAnterior));
+            return nomeDoAlgarismo + ((ordemAnterior.Algarismos.First() == 0) ? string.Empty : (" e " + ordemAnterior));
         }
 
         public bool EhDoCasoEspecialDeDezADezenove

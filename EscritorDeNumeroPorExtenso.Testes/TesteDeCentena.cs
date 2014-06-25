@@ -23,7 +23,7 @@ namespace EscritorDeNumeroPorExtenso.Testes
         {
             Assert.AreEqual("cento e onze", new Centena(1, new Dezena(1, new Unidade(1))).ToString());
         }
-        
+
         [TestMethod]
         public void DeveGerarUmaCentena999()
         {

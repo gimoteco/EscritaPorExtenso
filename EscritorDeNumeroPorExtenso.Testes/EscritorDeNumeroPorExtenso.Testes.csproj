@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="TesteDeCentena.cs" />
     <Compile Include="TesteDeDezena.cs" />
+    <Compile Include="TesteDeMilhar.cs" />
     <Compile Include="TesteDeUnidade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
