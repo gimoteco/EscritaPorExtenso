@@ -43,6 +43,7 @@
     <Compile Include="Dezena.cs" />
     <Compile Include="IClasse.cs" />
     <Compile Include="IOrdem.cs" />
+    <Compile Include="Milhao.cs" />
     <Compile Include="Milhar.cs" />
     <Compile Include="PrimeiraClasse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

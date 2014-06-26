@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
 
 namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
     public class Unidade : IOrdem
     {
-        public int Algarismo { get; set; }
+        private int Algarismo { get; set; }
 
         private static readonly Dictionary<int, string> _nomeDosAlgarismos = new Dictionary<int, string>()
         {

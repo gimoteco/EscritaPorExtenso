@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,20 +18,14 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
             {9, "novecentos"},
         };
 
-        public int Algarismo { get; set; }
-        public IOrdem OrdemAnterior { get; set; }
+        private int Algarismo { get; set; }
+        private IOrdem OrdemAnterior { get; set; }
 
         public Centena(int algarismo, IOrdem ordemAnterior = null)
         {
             OrdemAnterior = ordemAnterior ?? new Dezena(0, new Unidade(0));
             Algarismo = algarismo;
         }
-
-        //public override string ToString()
-        //{
-        //    return (EhDoCasoEspecialDaPrimeiraCentena ? "cento" : _nomeDosAlgarismos[Algarismo])
-        //        + " e " + OrdemAnterior.ToString();
-        //}
 
         public override string ToString()
         {

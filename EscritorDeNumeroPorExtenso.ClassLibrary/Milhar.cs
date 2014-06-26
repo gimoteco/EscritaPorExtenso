@@ -1,16 +1,14 @@
 using System;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 
 namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
     public class Milhar : IClasse
     {
-        public IOrdem Ordens { get; set; }
+        private IOrdem Ordens { get; set; }
         public IClasse ClasseAnterior { get; set; }
         public string Sulfixo { get { return "mil"; } }
+        public string SulfixoPlural { get { return Sulfixo; } }
 
         public int[] Algarismos
         {
@@ -31,7 +29,7 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
         private string LigaClasses(string ordem, IClasse classeAnterior)
         {
             return (EhDoCasoEspecialDoPrimeiroMilhar ? (ordem + " " + classeAnterior) : ordem)
-                + (TudoZero ? string.Empty : (" e " + classeAnterior));
+                + (ClasseAnteriorTudoZero ? string.Empty : (" e " + classeAnterior));
         }
 
         private bool EhDoCasoEspecialDoPrimeiroMilhar
@@ -39,12 +37,11 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
             get { return Ordens.Algarismos.First() == 1 && Ordens.Algarismos.Length == 1; }
         }
 
-        private bool TudoZero
+        private bool ClasseAnteriorTudoZero
         {
             get
             {
                 return Array.TrueForAll(ClasseAnterior.Algarismos, x => x == 0);
-                //ClasseAnterior.Algarismos.Skip(1).All(x => x == 0);
             }
         }
     }

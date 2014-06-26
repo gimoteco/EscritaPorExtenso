@@ -2,8 +2,9 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
     public class PrimeiraClasse : IClasse
     {
-        public IOrdem Ordem { get; set; }
+        private IOrdem Ordem { get; set; }
         public string Sulfixo { get; private set; }
+        public string SulfixoPlural { get; private set; }
 
         public int[] Algarismos
         {
