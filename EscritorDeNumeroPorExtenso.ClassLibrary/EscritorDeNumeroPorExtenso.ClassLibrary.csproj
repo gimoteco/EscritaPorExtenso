@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Centena.cs" />
+    <Compile Include="Centesimos.cs" />
     <Compile Include="Dezena.cs" />
     <Compile Include="IClasse.cs" />
     <Compile Include="IOrdem.cs" />
