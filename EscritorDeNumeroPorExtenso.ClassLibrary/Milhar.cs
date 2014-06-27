@@ -6,14 +6,9 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
     public class Milhar : IClasse
     {
         private IOrdem Ordens { get; set; }
-        public IClasse ClasseAnterior { get; set; }
-        public string Sulfixo { get { return "mil"; } }
-        public string SulfixoPlural { get { return Sulfixo; } }
-
-        public int[] Algarismos
-        {
-            get { return Ordens.Algarismos.Concat(ClasseAnterior.Algarismos).ToArray(); }
-        }
+        private IClasse ClasseAnterior { get; set; }
+        public string Sufixo { get { return "mil"; } }
+        public int[] Algarismos { get { return Ordens.Algarismos.Concat(ClasseAnterior.Algarismos).ToArray(); } }
 
         public Milhar(IOrdem ordem, IClasse classeAnterior = null)
         {
@@ -23,7 +18,7 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 
         public override string ToString()
         {
-            return EhDoCasoEspecialDoPrimeiroMilhar ? Sulfixo : LigaClasses(Ordens + " " + Sulfixo, ClasseAnterior);
+            return EhDoCasoEspecialDoPrimeiroMilhar ? Sufixo : LigaClasses(Ordens + " " + Sufixo, ClasseAnterior);
         }
 
         private string LigaClasses(string ordem, IClasse classeAnterior)
@@ -37,12 +32,6 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
             get { return Ordens.Algarismos.First() == 1 && Ordens.Algarismos.Length == 1; }
         }
 
-        private bool ClasseAnteriorTudoZero
-        {
-            get
-            {
-                return Array.TrueForAll(ClasseAnterior.Algarismos, x => x == 0);
-            }
-        }
+        private bool ClasseAnteriorTudoZero { get { return Array.TrueForAll(ClasseAnterior.Algarismos, x => x == 0); } }
     }
 }

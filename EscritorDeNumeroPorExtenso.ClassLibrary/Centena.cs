@@ -5,19 +5,12 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
     public class Centena : IOrdem
     {
-        public static readonly Dictionary<int, string> _nomeDosAlgarismos = new Dictionary<int, string>()
+        private static readonly Dictionary<int, string> NomeDosAlgarismos = new Dictionary<int, string>() 
         {
-            {1, "cem"},
-            {2, "duzentos"},
-            {3, "trezentos"},
-            {4, "quatrocentos"},
-            {5, "quinhentos"},
-            {6, "seiscentos"},
-            {7, "setecentos"},
-            {8, "oitocentos"},
-            {9, "novecentos"},
+            {1, "cem"},  {2, "duzentos"}, {3, "trezentos"},
+            {4, "quatrocentos"}, {5, "quinhentos"}, {6, "seiscentos"},
+            {7, "setecentos"}, {8, "oitocentos"}, {9, "novecentos"} 
         };
-
         private int Algarismo { get; set; }
         private IOrdem OrdemAnterior { get; set; }
 
@@ -29,10 +22,10 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 
         public override string ToString()
         {
-            return LigaOrdens((EhDoCasoEspecialDaPrimeiraCentena ? "cento" : _nomeDosAlgarismos[Algarismo]), OrdemAnterior);
+            return LigaOrdens((EhDoCasoEspecialDaPrimeiraCentena ? "cento" : NomeDosAlgarismos[Algarismo]), OrdemAnterior);
         }
 
-        public bool EhDoCasoEspecialDaPrimeiraCentena
+        private bool EhDoCasoEspecialDaPrimeiraCentena
         {
             get { return Algarismo == 1 && Algarismos.Sum() > 1; }
         }

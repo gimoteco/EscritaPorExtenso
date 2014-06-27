@@ -4,14 +4,14 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
     public class Centesimos : IClasse
     {
-        public IOrdem Ordem { get; set; }
+        private IOrdem Ordem { get; set; }
 
-        public bool EhSingular
+        private bool EhSingular
         {
             get { return Algarismos.Last() == 1 && Algarismos.Length == 1; }
         }
 
-        public string Sulfixo
+        public string Sufixo
         {
             get { return EhSingular ? "centésimo" : "centésimos"; }
         }
@@ -25,7 +25,7 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 
         public override string ToString()
         {
-            return Ordem + " " + Sulfixo;
+            return Ordem + " " + Sufixo;
         }
     }
 }

@@ -3,7 +3,7 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
     public class PrimeiraClasse : IClasse
     {
         private IOrdem Ordem { get; set; }
-        public string Sulfixo { get; private set; }
+        public string Sufixo { get; private set; }
         public string SulfixoPlural { get; private set; }
 
         public int[] Algarismos

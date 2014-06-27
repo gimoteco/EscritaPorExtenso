@@ -29,5 +29,11 @@ namespace EscritorDeNumeroPorExtenso.Testes
         {
             Assert.AreEqual("um milhão e cem mil e um", new Milhao(new Unidade(1), new Milhar(new Centena(1), new PrimeiraClasse(new Unidade(1)))).ToString());
         }
+
+        [TestMethod]
+        public void DeveGerarNumero1111e3()
+        {
+            Assert.AreEqual("um milhão e cento e onze mil", new Milhao(new Unidade(1), new Milhar(new Centena(1, new Dezena(1, new Unidade(1))))).ToString());
+        }
     }
 }

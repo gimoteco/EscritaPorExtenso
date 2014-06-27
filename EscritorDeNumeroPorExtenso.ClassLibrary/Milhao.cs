@@ -7,23 +7,8 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
     {
         private IOrdem Ordem { get; set; }
         private IClasse ClasseAnterior { get; set; }
-
-        public string SulfixoSingular { get { return "milhão"; } }
-        public string Sulfixo
-        {
-            get
-            {
-                return EhSingular ? SulfixoSingular : SulfixoPlural;
-            }
-        }
-
-        public bool EhSingular
-        {
-            get { return Algarismos.Last() == 1 && Algarismos.Length == 1; }
-        }
-
-        public string SulfixoPlural { get { return "milhões"; } }
-
+        public string Sufixo { get { return EhSingular ? "milhão" : "milhões"; } }
+        private bool EhSingular { get { return Algarismos.Last() == 1 && Algarismos.Length == 1; } }
         public int[] Algarismos { get { return Ordem.Algarismos; } }
 
         public Milhao(IOrdem ordem, IClasse classeAnterior = null)
@@ -34,7 +19,7 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 
         public override string ToString()
         {
-            return Ordem + " " + Sulfixo + 
+            return Ordem + " " + Sufixo +
                 (ClasseAnteriorTudoZero ? String.Empty : (" e " + ClasseAnterior));
         }
 

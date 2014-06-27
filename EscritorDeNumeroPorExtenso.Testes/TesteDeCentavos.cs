@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using EscritorDeNumeroPorExtenso.ClassLibrary;
+﻿using EscritorDeNumeroPorExtenso.ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EscritorDeNumeroPorExtenso.Testes

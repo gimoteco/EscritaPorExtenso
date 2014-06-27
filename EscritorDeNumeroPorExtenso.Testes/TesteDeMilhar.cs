@@ -1,3 +1,4 @@
+using System;
 using EscritorDeNumeroPorExtenso.ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

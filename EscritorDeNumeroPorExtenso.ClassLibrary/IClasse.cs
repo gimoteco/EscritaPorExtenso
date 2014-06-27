@@ -2,8 +2,7 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
     public interface IClasse
     {
-        //TODO: Don't repeat yourself
-        string Sulfixo { get; }
+        string Sufixo { get; }
         int[] Algarismos { get; }
     }
 }
