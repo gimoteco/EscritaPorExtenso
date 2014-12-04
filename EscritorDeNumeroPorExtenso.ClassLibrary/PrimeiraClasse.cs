@@ -1,3 +1,5 @@
+using System;
+
 namespace EscritorDeNumeroPorExtenso.ClassLibrary
 {
     public class PrimeiraClasse : IClasse
@@ -19,6 +21,21 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
         public override string ToString()
         {
             return Ordem.ToString();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            return ToString() == obj.ToString();
+        }
+
+        public override int GetHashCode()
+        {
+            return ToString().GetHashCode();
         }
     }
 }
