@@ -1,24 +1,25 @@
 ﻿using EscritorDeNumeroPorExtenso.ClassLibrary;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+
 
 namespace EscritorDeNumeroPorExtenso.Testes
 {
-    [TestClass]
+    [TestFixture]
     public class TesteDeCentavos
     {
-        [TestMethod]
+        [Test]
         public void DeveGerarCinquentaCentesimos()
         {
             Assert.AreEqual("dez centésimos", new Centesimos(new Dezena(1)).ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void DeveGerarUmMilhaoECinquentaCentesimos()
         {
             Assert.AreEqual("um milhão e cinquenta centésimos", new Milhao(new Unidade(1), new Centesimos(new Dezena(5))).ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void DeveGerarCentesimoNoSingular()
         {
             Assert.AreEqual("um centésimo", new Centesimos(new Unidade(1)).ToString());

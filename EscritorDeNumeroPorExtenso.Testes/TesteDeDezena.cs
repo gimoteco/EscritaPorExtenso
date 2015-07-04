@@ -1,18 +1,18 @@
 using EscritorDeNumeroPorExtenso.ClassLibrary;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace EscritorDeNumeroPorExtenso.Testes
 {
-    [TestClass]
+    [TestFixture]
     public class TesteDeDezena
     {
-        [TestMethod]
+        [Test]
         public void DeveGerarNumeroDeUmaDezenaSimples()
         {
             Assert.AreEqual("dez", new Dezena(1).ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void DeveGerarUmaDezenaDaPrimeiraDezena()
         {
             Assert.AreEqual("onze", new Dezena(1, new Unidade(1)).ToString());
@@ -20,7 +20,7 @@ namespace EscritorDeNumeroPorExtenso.Testes
             Assert.AreEqual("dezenove", new Dezena(1, new Unidade(9)).ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void DeveGerarUmaDezenaQualquer()
         {
             Assert.AreEqual("vinte e um", new Dezena(2, new Unidade(1)).ToString());

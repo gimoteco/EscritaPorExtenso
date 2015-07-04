@@ -1,36 +1,36 @@
 using EscritorDeNumeroPorExtenso.ClassLibrary;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace EscritorDeNumeroPorExtenso.Testes
 {
-    [TestClass]
+    [TestFixture]
     public class TesteDeMilhao
     {
-        [TestMethod]
+        [Test]
         public void DeveGerarNumeroUmMilhao()
         {
             Assert.AreEqual("um milhão", new Milhao(new Unidade(1)).ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void DeveGerarNumeroDezMilhões()
         {
             Assert.AreEqual("dez milhões", new Milhao(new Dezena(1)).ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void DeveGerarNumeroUmMilhaoECemMil()
         {
             Assert.AreEqual("um milhão e cem mil", new Milhao(new Unidade(1), new Milhar(new Centena(1))).ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void DeveGerarNumeroUmMilhaoECemMilEUm()
         {
             Assert.AreEqual("um milhão e cem mil e um", new Milhao(new Unidade(1), new Milhar(new Centena(1), new PrimeiraClasse(new Unidade(1)))).ToString());
         }
 
-        [TestMethod]
+        [Test]
         public void DeveGerarNumero1111e3()
         {
             Assert.AreEqual("um milhão e cento e onze mil", new Milhao(new Unidade(1), new Milhar(new Centena(1, new Dezena(1, new Unidade(1))))).ToString());
