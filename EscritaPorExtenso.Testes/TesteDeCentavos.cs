@@ -1,4 +1,4 @@
-﻿using EscritorDeNumeroPorExtenso.ClassLibrary;
+using EscritorDeNumeroPorExtenso.ClassLibrary;
 using NUnit.Framework;
 
 

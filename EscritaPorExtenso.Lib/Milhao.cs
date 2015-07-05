@@ -7,7 +7,7 @@ namespace EscritorDeNumeroPorExtenso.ClassLibrary
     {
         private IOrdem Ordem { get; set; }
         private IClasse ClasseAnterior { get; set; }
-        public string Sufixo { get { return EhSingular ? "milh„o" : "milhıes"; } }
+        public string Sufixo { get { return EhSingular ? "milh√£o" : "milh√µes"; } }
         private bool EhSingular { get { return Algarismos.Last() == 1 && Algarismos.Length == 1; } }
         public int[] Algarismos { get { return Ordem.Algarismos; } }
 
