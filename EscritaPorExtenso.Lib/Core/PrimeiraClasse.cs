@@ -1,6 +1,6 @@
 using System;
 
-namespace EscritorDeNumeroPorExtenso.ClassLibrary
+namespace EscritaPorExtenso.Lib
 {
     public class PrimeiraClasse : IClasse
     {

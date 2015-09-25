@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EscritorDeNumeroPorExtenso.ClassLibrary
+namespace EscritaPorExtenso.Lib
 {
     public class Centena : IOrdem
     {

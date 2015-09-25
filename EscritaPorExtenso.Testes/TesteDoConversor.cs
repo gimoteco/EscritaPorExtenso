@@ -1,7 +1,7 @@
-﻿using EscritorDeNumeroPorExtenso.ClassLibrary;
+﻿using EscritaPorExtenso.Lib;
 using NUnit.Framework;
 
-namespace EscritorDeNumeroPorExtenso.Testes
+namespace EscritaPorExtenso.Testes
 {
     [TestFixture]
     public class TesteDoConversor
@@ -18,10 +18,34 @@ namespace EscritorDeNumeroPorExtenso.Testes
             Assert.AreEqual(new PrimeiraClasse(new Unidade(9)), ConversorDeNumeroParaClasses.Converter(9));
         }
 
-        [Test, Ignore("Nao foi implementado")]
+        [Test]
         public void DeveConverterUmaDezena()
         {
             Assert.AreEqual(new PrimeiraClasse(new Dezena(1)), ConversorDeNumeroParaClasses.Converter(10));
+        }
+
+        [Test]
+        public void DeveConverterUmaDezenaComUnidade()
+        {
+            var convertido = ConversorDeNumeroParaClasses.Converter(13);
+            
+            Assert.AreEqual(new PrimeiraClasse(new Dezena(1, new Unidade(3))), convertido);
+        }
+
+        [Test]
+        public void DeveConverterUmaCentena()
+        {
+            var convertido = ConversorDeNumeroParaClasses.Converter(200);
+            
+            Assert.AreEqual(new PrimeiraClasse(new Centena(2)), convertido);
+        }
+
+        [Test]
+        public void DeveConverterUmaCentenaComDezenaEUnidade()
+        {
+            var convertido = ConversorDeNumeroParaClasses.Converter(666);
+
+            Assert.AreEqual(new PrimeiraClasse(new Centena(6, new Dezena(6, new Unidade(6)))), convertido);
         }
     }
 }

@@ -37,7 +37,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConversorDeNumeroParaClasses.cs" />
     <Compile Include="TesteDeCentavos.cs" />
     <Compile Include="TesteDeCentena.cs" />
     <Compile Include="TesteDeDezena.cs" />

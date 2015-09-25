@@ -29,14 +29,19 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="Centena.cs" />
-    <Compile Include="Centesimos.cs" />
-    <Compile Include="Dezena.cs" />
-    <Compile Include="IClasse.cs" />
-    <Compile Include="IOrdem.cs" />
-    <Compile Include="Milhao.cs" />
-    <Compile Include="Milhar.cs" />
-    <Compile Include="PrimeiraClasse.cs" />
-    <Compile Include="Unidade.cs" />
+    <Compile Include="Core\Centena.cs" />
+    <Compile Include="Core\Centesimos.cs" />
+    <Compile Include="Core\Dezena.cs" />
+    <Compile Include="Core\IClasse.cs" />
+    <Compile Include="Core\IOrdem.cs" />
+    <Compile Include="Core\Milhao.cs" />
+    <Compile Include="Core\Milhar.cs" />
+    <Compile Include="Core\PrimeiraClasse.cs" />
+    <Compile Include="Core\Unidade.cs" />
+    <Compile Include="Conversor\ConversorDeNumeroParaClasses.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Conversor\" />
   </ItemGroup>
 </Project>

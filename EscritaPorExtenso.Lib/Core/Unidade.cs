@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace EscritorDeNumeroPorExtenso.ClassLibrary
+namespace EscritaPorExtenso.Lib
 {
     public class Unidade : IOrdem
     {

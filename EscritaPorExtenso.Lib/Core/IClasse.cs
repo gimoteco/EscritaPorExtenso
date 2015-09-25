@@ -1,4 +1,4 @@
-namespace EscritorDeNumeroPorExtenso.ClassLibrary
+namespace EscritaPorExtenso.Lib
 {
     public interface IClasse
     {

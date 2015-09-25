@@ -1,8 +1,8 @@
-using EscritorDeNumeroPorExtenso.ClassLibrary;
+using EscritaPorExtenso.Lib;
 using NUnit.Framework;
 
 
-namespace EscritorDeNumeroPorExtenso.Testes
+namespace EscritaPorExtenso.Testes
 {
     [TestFixture]
     public class TesteDeCentavos
