@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace EscritaPorExtenso.Testes
 {
     [TestFixture]
-    public class TesteDeCentavos
+    public class TesteDeCentesimos
     {
         [Test]
         public void DeveGerarCinquentaCentesimos()
