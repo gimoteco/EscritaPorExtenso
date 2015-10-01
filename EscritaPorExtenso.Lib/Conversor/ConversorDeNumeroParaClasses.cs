@@ -35,7 +35,7 @@ namespace EscritaPorExtenso.Lib
         public static IClasse Converter(int numero)
         {
             var digitos = numero.ToString();
-            var primeiraClasse = ConverterClasse<PrimeiraClasse>(digitos.Substring(digitos.Length - digitos.Length, digitos.Length));
+            var primeiraClasse = ConverterClasse<PrimeiraClasse>(digitos.Substring(0, digitos.Length));
             return primeiraClasse;
         }
     }
