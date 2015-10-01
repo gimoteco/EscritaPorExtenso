@@ -14,7 +14,7 @@ namespace EscritaPorExtenso.Lib
         };
 
 
-        public Unidade(int algarismo)
+        public Unidade(int algarismo, IOrdem anterior = null)
         {
             Algarismo = algarismo;
         }

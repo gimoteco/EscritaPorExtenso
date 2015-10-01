@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,9 +39,8 @@
     <Compile Include="Core\PrimeiraClasse.cs" />
     <Compile Include="Core\Unidade.cs" />
     <Compile Include="Conversor\ConversorDeNumeroParaClasses.cs" />
+    <Compile Include="Helpers\ExtensoesDeString.cs" />
+    <Compile Include="Helpers\ExtensoesDeType.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="Conversor\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

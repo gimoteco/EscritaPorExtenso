@@ -7,6 +7,7 @@ namespace EscritaPorExtenso.Lib
     {
         private static readonly Dictionary<int, string> NomeDosAlgarismos = new Dictionary<int, string>()
         {
+            {0, ""},
             {1, "dez"}, {2, "vinte"}, {3, "trinta"},
             {4, "quarenta"}, {5, "cinquenta"}, {6, "sessenta"},
             {7, "setenta"}, {8, "oitenta"}, {9, "noventa"},
