@@ -13,7 +13,7 @@ namespace EscritaPorExtenso.Lib
             get { return Ordem.Algarismos; }
         }
 
-        public PrimeiraClasse(IOrdem ordem)
+        public PrimeiraClasse(IOrdem ordem, IClasse classeAnterior = null)
         {
             Ordem = ordem;
         }
