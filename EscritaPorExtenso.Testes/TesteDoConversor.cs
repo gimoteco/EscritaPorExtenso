@@ -47,5 +47,21 @@ namespace EscritaPorExtenso.Testes
 
             Assert.AreEqual(new PrimeiraClasse(new Centena(6, new Dezena(6, new Unidade(6)))), convertido);
         }
+
+        [Test, Ignore("Não está implementado")]
+        public void DeveConverterMilhar()
+        {
+            var convertido = ConversorDeNumeroParaClasses.Converter(1000);
+            
+            Assert.AreEqual(new Milhar(new Unidade(1)), convertido);    
+        }
+
+        [Test, Ignore("Não está implementado")]
+        public void DeveConverterMilharComClasseAnterior()
+        {
+            var convertido = ConversorDeNumeroParaClasses.Converter(1984);
+
+            Assert.AreEqual(new Milhar(new Unidade(1), new PrimeiraClasse(new Centena(9, new Dezena(8, new Unidade(4))))), convertido);
+        }
     }
 }

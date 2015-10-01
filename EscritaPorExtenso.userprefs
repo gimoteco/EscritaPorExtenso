@@ -1,14 +1,49 @@
 ﻿<Properties StartupItem="EscritaPorExtenso.Lib/EscritaPorExtenso.Lib.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="EscritaPorExtenso.Lib/Core/Centena.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EscritaPorExtenso.Lib/Conversor/ConversorDeNumeroParaClasses.cs">
     <Files>
-      <File FileName="EscritaPorExtenso.Testes/TesteDoConversor.cs" Line="1" Column="1" />
-      <File FileName="EscritaPorExtenso.Lib/Core/PrimeiraClasse.cs" Line="16" Column="9" />
-      <File FileName="EscritaPorExtenso.Lib/Core/Centena.cs" Line="4" Column="22" />
+      <File FileName="EscritaPorExtenso.Lib/Core/PrimeiraClasse.cs" Line="24" Column="10" />
+      <File FileName="EscritaPorExtenso.Testes/TesteDoConversor.cs" Line="62" Column="68" />
+      <File FileName="EscritaPorExtenso.Lib/Core/Milhar.cs" Line="45" Column="64" />
+      <File FileName="EscritaPorExtenso.Testes/TesteDeMilhar.cs" Line="33" Column="13" />
+      <File FileName="EscritaPorExtenso.Lib/Conversor/ConversorDeNumeroParaClasses.cs" Line="39" Column="64" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EscritaPorExtenso" expanded="True">
+            <Node name="EscritaPorExtenso.Lib" expanded="True">
+              <Node name="Conversor" expanded="True">
+                <Node name="ConversorDeNumeroParaClasses.cs" selected="True" />
+              </Node>
+              <Node name="Core" expanded="True" />
+            </Node>
+            <Node name="EscritaPorExtenso.Testes" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="EscritaPorExtenso" expanded="True">
+            <Node name="EscritaPorExtenso.Testes" expanded="True">
+              <Node name="EscritaPorExtenso" expanded="True">
+                <Node name="Testes" expanded="True">
+                  <Node name="TesteDoConversor" expanded="True">
+                    <Node name="DeveConverterMilharComClasseAnterior" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/guilherme/Projects/EscritaPorExtenso/EscritaPorExtenso.Testes/TesteDoConversor.cs" line="64" column="1" />
+      <Breakpoint file="/home/guilherme/Projects/EscritaPorExtenso/EscritaPorExtenso.Testes/TesteDeMilhar.cs" line="34" column="33" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>

@@ -27,9 +27,19 @@ namespace EscritaPorExtenso.Lib
                 + (ClasseAnteriorTudoZero ? string.Empty : (" e " + classeAnterior));
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            return ToString() == obj.ToString();
+        }
+
         private bool EhDoCasoEspecialDoPrimeiroMilhar
         {
-            get { return Ordens.Algarismos.First() == 1 && Ordens.Algarismos.Length == 1; }
+            get { return Ordens.Algarismos.First() == 1 && Ordens.Algarismos.Length == 1 && ClasseAnterior == null; }
         }
 
         private bool ClasseAnteriorTudoZero { get { return Array.TrueForAll(ClasseAnterior.Algarismos, x => x == 0); } }
