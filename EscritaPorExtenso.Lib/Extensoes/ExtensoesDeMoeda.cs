@@ -7,7 +7,7 @@ namespace EscritaPorExtenso
     {
         public static string PorExtenso(this double valor)
         {
-            return new Real(valor).ToString();
+            return new Real(Convert.ToDecimal(valor)).ToString();
         }
 
         public static string PorExtenso(this int valor)
@@ -17,12 +17,12 @@ namespace EscritaPorExtenso
 
         public static string PorExtenso(this float valor)
         {
-            return new Real(valor).ToString();
+            return new Real(Convert.ToDecimal(valor)).ToString();
         }
 
         public static string PorExtenso(this decimal valor)
         {
-            return new Real((double)valor).ToString();
+            return new Real(valor).ToString();
         }
     }
 }

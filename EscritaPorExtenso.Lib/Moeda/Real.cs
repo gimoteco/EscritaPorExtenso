@@ -9,7 +9,7 @@ namespace EscritaPorExtenso.Lib.Moeda
         private string _pluralidadeInteira;
         private string _pluralidadeDecimal;
 
-        public Real(double valor)
+        public Real(decimal valor)
         {
             var numeroDaParteInteira = (int)Math.Truncate(valor);
 
