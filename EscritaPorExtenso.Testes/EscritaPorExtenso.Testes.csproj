@@ -37,18 +37,24 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TesteDeCentesimos.cs" />
-    <Compile Include="TesteDeCentena.cs" />
-    <Compile Include="TesteDeDezena.cs" />
     <Compile Include="TesteDeMilhao.cs" />
-    <Compile Include="TesteDeMilhar.cs" />
-    <Compile Include="TesteDeUnidade.cs" />
-    <Compile Include="TesteDoConversor.cs" />
+    <Compile Include="TesteDeMoeda.cs" />
+    <Compile Include="Ordens\TesteDeCentena.cs" />
+    <Compile Include="Ordens\TesteDeDezena.cs" />
+    <Compile Include="Ordens\TesteDeUnidade.cs" />
+    <Compile Include="Conversor\TesteDoConversor.cs" />
+    <Compile Include="Classes\TesteDeMilhar.cs" />
+    <Compile Include="Classes\TesteDeCentesimos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EscritaPorExtenso.Lib\EscritaPorExtenso.Lib.csproj">
       <Project>{C166C8C6-7CD1-4248-B190-58642BF691E3}</Project>
       <Name>EscritaPorExtenso.Lib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Ordens\" />
+    <Folder Include="Conversor\" />
   </ItemGroup>
 </Project>
