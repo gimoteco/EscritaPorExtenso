@@ -1,6 +1,6 @@
 # Escreva seus valores por extenso
 
-# Importnando a biblioteca
+# Importando a biblioteca
 ``` csharp
 using EscritaPorExtenso;
 ```
