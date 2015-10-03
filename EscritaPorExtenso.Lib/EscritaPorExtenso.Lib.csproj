@@ -41,9 +41,11 @@
     <Compile Include="Helpers\ExtensoesDeString.cs" />
     <Compile Include="Helpers\ExtensoesDeType.cs" />
     <Compile Include="Moeda\Real.cs" />
+    <Compile Include="Extensoes\ExtensoesDeMoeda.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Folder Include="Moeda\" />
+    <Folder Include="Extensoes\" />
   </ItemGroup>
 </Project>
