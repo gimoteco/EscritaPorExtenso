@@ -25,7 +25,7 @@ namespace EscritaPorExtenso.Lib
 
         private bool ClasseAnteriorTudoZero
         {
-            get { return Array.TrueForAll(ClasseAnterior.Algarismos, x => x == 0); }
+            get { return Array.TrueForAll(ClasseAnterior.Algarismos, algarismo => algarismo == 0); }
         }
     }
 }

@@ -47,6 +47,7 @@ namespace EscritaPorExtenso.Testes
         public void ZeroDeveSerSingular() 
         {
             // + info em http://vestibular.uol.com.br/pegadinhas/ult1796u122.jhtm
+            Assert.AreEqual("zero real", new Real(0).ToString());
         }
     }
 }

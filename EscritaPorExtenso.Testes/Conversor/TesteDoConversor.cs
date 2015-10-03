@@ -7,6 +7,14 @@ namespace EscritaPorExtenso.Testes
     public class TesteDoConversor
     {
         [Test]
+        public void DeveConverterZero()
+        {
+            var convertido = ConversorDeNumeroParaClasses.Converter(0);
+            
+            Assert.AreEqual(new PrimeiraClasse(new Unidade(0)), convertido);
+        }
+        
+        [Test]
         public void DeveConverterNumeroUm()
         {
             Assert.AreEqual(new PrimeiraClasse(new Unidade(1)), ConversorDeNumeroParaClasses.Converter(1));

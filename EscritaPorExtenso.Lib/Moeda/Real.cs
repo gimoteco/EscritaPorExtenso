@@ -46,10 +46,13 @@ namespace EscritaPorExtenso.Lib.Moeda
             if (_parteDecimal != null && _parteInteira != null)
                 return string.Format("{0} e {1}", parteInteira, parteDecimal);
 
-            if (_parteDecimal != null)
+            else if (_parteDecimal != null)
                 return parteDecimal;
             
-            return parteInteira;
+            else if (_parteInteira != null)
+                return parteInteira;
+
+            return string.Format("zero real", _pluralidadeInteira);
         }
     }
 }
