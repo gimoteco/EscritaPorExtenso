@@ -24,7 +24,7 @@ namespace EscritaPorExtenso.Lib
         private string LigaClasses(string ordem, IClasse classeAnterior)
         {
             return (EhDoCasoEspecialDoPrimeiroMilhar ? (ordem + " " + classeAnterior) : ordem)
-                + (ClasseAnteriorTudoZero ? string.Empty : (" e " + classeAnterior));
+                + (EhClasseAnteriorTudoZero ? string.Empty : (" e " + classeAnterior));
         }
 
         public override bool Equals(object obj)
@@ -39,9 +39,9 @@ namespace EscritaPorExtenso.Lib
 
         private bool EhDoCasoEspecialDoPrimeiroMilhar
         {
-            get { return Ordens.Algarismos.First() == 1 && Ordens.Algarismos.Length == 1 && ClasseAnterior == null; }
+            get { return Ordens.Algarismos.First() == 1 && Ordens.Algarismos.Length == 1 && EhClasseAnteriorTudoZero; }
         }
 
-        private bool ClasseAnteriorTudoZero { get { return Array.TrueForAll(ClasseAnterior.Algarismos, x => x == 0); } }
+        private bool EhClasseAnteriorTudoZero { get { return Array.TrueForAll(ClasseAnterior.Algarismos, algarismo => algarismo == 0); } }
     }
 }

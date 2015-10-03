@@ -9,19 +9,31 @@ namespace EscritaPorExtenso.Testes
         [Test]
         public void DeveGerarNumeroMil()
         {
-            Assert.AreEqual("um mil", new Milhar(new Unidade(1)).ToString());
+            var numero = new Milhar(new Unidade(1));
+
+            var porExtenso = numero.ToString();
+
+            Assert.AreEqual("mil", porExtenso);
         }
 
         [Test]
         public void DeveGerarNumeroDezMil()
         {
-            Assert.AreEqual("dez mil", new Milhar(new Dezena(1)).ToString());
+            var numero = new Milhar(new Dezena(1));
+
+            var porExtenso = numero.ToString();
+
+            Assert.AreEqual("dez mil", porExtenso);
         }
 
         [Test]
         public void DeveGerarNumeroMilECem()
         {
-            Assert.AreEqual("dez mil e cem", new Milhar(new Dezena(1), new PrimeiraClasse(new Centena(1))).ToString());
+            var numero = new Milhar(new Dezena(1), new PrimeiraClasse(new Centena(1)));
+
+            var porExtenso = numero.ToString();
+            
+            Assert.AreEqual("dez mil e cem", porExtenso);
         }
 
         [Test]

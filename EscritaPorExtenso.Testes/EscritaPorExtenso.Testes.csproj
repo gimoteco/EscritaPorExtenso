@@ -37,14 +37,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TesteDeMilhao.cs" />
     <Compile Include="TesteDeMoeda.cs" />
     <Compile Include="Ordens\TesteDeCentena.cs" />
     <Compile Include="Ordens\TesteDeDezena.cs" />
     <Compile Include="Ordens\TesteDeUnidade.cs" />
     <Compile Include="Conversor\TesteDoConversor.cs" />
     <Compile Include="Classes\TesteDeMilhar.cs" />
-    <Compile Include="Classes\TesteDeCentesimos.cs" />
+    <Compile Include="Classes\TesteDeMilhao.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EscritaPorExtenso.Lib\EscritaPorExtenso.Lib.csproj">

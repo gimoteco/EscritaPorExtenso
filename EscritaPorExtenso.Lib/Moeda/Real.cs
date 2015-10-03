@@ -12,8 +12,13 @@ namespace EscritaPorExtenso.Lib.Moeda
         public Real(double valor)
         {
             var numeroDaParteInteira = (int)Math.Truncate(valor);
-            _parteInteira = ConversorDeNumeroParaClasses.Converter(numeroDaParteInteira);
-            _pluralidadeInteira = ObterPluralidadeDaParteInteira(numeroDaParteInteira);
+
+            if (numeroDaParteInteira > 0)
+            {
+                _parteInteira = ConversorDeNumeroParaClasses.Converter(numeroDaParteInteira);
+                _pluralidadeInteira = ObterPluralidadeDaParteInteira(numeroDaParteInteira);
+            }
+
             var numeroDaParteDecimal = (int) ((valor - Math.Truncate(valor)) * 100);
 
             if (numeroDaParteDecimal > 0)
@@ -35,12 +40,16 @@ namespace EscritaPorExtenso.Lib.Moeda
 
         public override string ToString()
         {
-            var parteInteira = string.Format("{0} {1}", _parteInteira, _pluralidadeInteira);
+            string parteInteira = string.Format("{0} {1}", _parteInteira, _pluralidadeInteira);
+            string parteDecimal = string.Format("{0} {1}", _parteDecimal, _pluralidadeDecimal);
 
-            if (_parteDecimal == null)
-                return parteInteira;
+            if (_parteDecimal != null && _parteInteira != null)
+                return string.Format("{0} e {1}", parteInteira, parteDecimal);
+
+            if (_parteDecimal != null)
+                return parteDecimal;
             
-            return string.Format("{0} e {1} {2}", parteInteira, _parteDecimal, _pluralidadeDecimal);
+            return parteInteira;
         }
     }
 }

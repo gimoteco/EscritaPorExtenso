@@ -30,7 +30,6 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Core\Centena.cs" />
-    <Compile Include="Core\Centesimos.cs" />
     <Compile Include="Core\Dezena.cs" />
     <Compile Include="Core\IClasse.cs" />
     <Compile Include="Core\IOrdem.cs" />
