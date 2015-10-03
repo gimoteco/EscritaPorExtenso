@@ -1,10 +1,13 @@
 # Escreva seus valores por extenso
 
-# Importando
-[C#]
+# Importnando a biblioteca
+``` csharp
 using EscritaPorExtenso;
+```
 
 # Usando
-1.99.PorExtenso();
+``` csharp
+1.99.PorExtenso(); // Obtém: um real e noventa e nove centavos
+```
 
 Simples assim!
