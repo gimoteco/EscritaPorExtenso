@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>EscritaPorExtenso.Lib</id>
+    <version>0.0.1</version>
+    <title>Escrever por extenso</title>
+    <authors>Guilherme Barbosa Ferreira, Robson Castilho e Yuri Claure</authors>
+    <owners>Guilherme Barbosa Ferreira</owners>
+    <projectUrl>https://github.com/gimoteco/EscritaPorExtenso</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Transforme valores monetários em valores escritos por extenso.</description>
+    <releaseNotes>Suporte até a classe de milhões.</releaseNotes>
+    <copyright>Copyleft 2015</copyright>
+    <tags>monetário financeiro extenso valores reais real escrita</tags>
+  </metadata>
+</package>
