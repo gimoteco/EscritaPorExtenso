@@ -15,6 +15,11 @@ namespace EscritaPorExtenso
             return new Real(valor).ToString();
         }
 
+        public static string PorExtenso(this long valor)
+        {
+            return new Real(valor).ToString();
+        }
+
         public static string PorExtenso(this float valor)
         {
             return new Real(Convert.ToDecimal(valor)).ToString();

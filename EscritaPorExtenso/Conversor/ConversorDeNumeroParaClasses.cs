@@ -11,7 +11,7 @@ namespace EscritaPorExtenso.Conversor
         private static readonly Type[] _ordens = { typeof(Unidade), typeof(Dezena), typeof(Centena) };
         private static readonly Type[] _classes = { typeof(PrimeiraClasse), typeof(Milhar), typeof(Milhao) };
 
-        public static IClasse Converter(int numero)
+        public static IClasse Converter(long numero)
         {
             var digitos = InverterNumero(numero);
             var numeroDeClasses = ObterNumeroDeClasses(digitos);
@@ -55,7 +55,7 @@ namespace EscritaPorExtenso.Conversor
             return (int)Math.Ceiling((decimal) digitos.Length / NumeroDeClasses);
         }
 
-        private static string InverterNumero(int numero)
+        private static string InverterNumero(long numero)
         {
             return new string(numero.ToString().Reverse().ToArray());
         }

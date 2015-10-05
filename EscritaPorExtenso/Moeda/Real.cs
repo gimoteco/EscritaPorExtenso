@@ -13,7 +13,9 @@ namespace EscritaPorExtenso.Moeda
 
         public Real(decimal valor)
         {
-            var numeroDaParteInteira = (int)Math.Truncate(valor);
+            var numeroDaParteInteira = (long)Math.Truncate(valor);
+
+            ValidarMaximoPermitido(valor, numeroDaParteInteira);
 
             if (numeroDaParteInteira > 0)
             {
@@ -21,7 +23,12 @@ namespace EscritaPorExtenso.Moeda
                 _pluralidadeInteira = ObterPluralidadeDaParteInteira(numeroDaParteInteira);
             }
 
-            var numeroDaParteDecimal = (int) ((valor - Math.Truncate(valor)) * 100);
+            var parteDecimal = ((valor - Math.Truncate(valor))*100);
+
+            if (parteDecimal - Math.Truncate(parteDecimal) > 0)
+                throw new Exception(string.Format("O valor {0} tem mais de duas casas decimais", valor));
+
+            var numeroDaParteDecimal = (long) parteDecimal;
 
             if (numeroDaParteDecimal > 0)
             {
@@ -30,12 +37,20 @@ namespace EscritaPorExtenso.Moeda
             }
         }
 
-        private static string ObterPluralidadeDaParteInteira(int parteInteira)
+        private static void ValidarMaximoPermitido(decimal valor, long numeroDaParteInteira)
+        {
+            var maximoPermitido = ConversorDeNumeroParaClasses.NumeroDeClasses*3;
+
+            if (numeroDaParteInteira.ToString().Length > maximoPermitido)
+                throw new Exception(string.Format("O valor {0} é maior que o suportado pela biblioteca", valor));
+        }
+
+        private static string ObterPluralidadeDaParteInteira(long parteInteira)
         {
             return parteInteira > 1 ? "reais" : "real";
         }
 
-        private static string ObterPluralidadeDaParteDecimal(int numeroDaParteDecimal)
+        private static string ObterPluralidadeDaParteDecimal(long numeroDaParteDecimal)
         {
             return numeroDaParteDecimal > 1 ? "centavos" : "centavo";
         }
@@ -48,13 +63,13 @@ namespace EscritaPorExtenso.Moeda
             if (_parteDecimal != null && _parteInteira != null)
                 return string.Format("{0} e {1}", parteInteira, parteDecimal);
 
-            else if (_parteDecimal != null)
+            if (_parteDecimal != null)
                 return parteDecimal;
-            
-            else if (_parteInteira != null)
+
+            if (_parteInteira != null)
                 return parteInteira;
 
-            return string.Format("zero real", _pluralidadeInteira);
+            return "zero real";
         }
     }
 }
