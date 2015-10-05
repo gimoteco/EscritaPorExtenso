@@ -1,5 +1,10 @@
 # Escreva seus valores por extenso
 
+# Instalando
+``` powershell
+Install-Package EscritaPorExtenso 
+```
+
 # Importando a biblioteca
 ``` csharp
 using EscritaPorExtenso;
