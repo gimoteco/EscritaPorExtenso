@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/nkdw5ed1m10fyrl2?svg=true)](https://ci.appveyor.com/project/gimoteco/escritaporextenso)
+
 # Escreva seus valores por extenso
 
 # Instalando
