@@ -1,8 +1,6 @@
-using System;
-
-namespace EscritaPorExtenso.Lib
+namespace EscritaPorExtenso.Core
 {
-    public class PrimeiraClasse : IClasse
+    internal class PrimeiraClasse : IClasse
     {
         private IOrdem Ordem { get; set; }
         public string Sufixo { get; private set; }

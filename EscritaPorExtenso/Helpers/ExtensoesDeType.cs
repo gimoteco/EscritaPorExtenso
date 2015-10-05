@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace EscritaPorExtenso.Lib.Helpers
+namespace EscritaPorExtenso.Helpers
 {
-    public static class ExtensoesDeType
+    internal static class ExtensoesDeType
     {
         public static T Construir<T>(this Type tipo, params object[] parametros)
         {

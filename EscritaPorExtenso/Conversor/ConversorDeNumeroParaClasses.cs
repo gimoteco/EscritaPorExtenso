@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Linq;
-using EscritaPorExtenso.Lib.Helpers;
+using EscritaPorExtenso.Core;
+using EscritaPorExtenso.Helpers;
 
-namespace EscritaPorExtenso.Lib
+namespace EscritaPorExtenso.Conversor
 {
-    public class ConversorDeNumeroParaClasses
+    internal class ConversorDeNumeroParaClasses
     {
         public static int NumeroDeClasses { get { return _classes.Length; } }
         private static readonly Type[] _ordens = { typeof(Unidade), typeof(Dezena), typeof(Centena) };

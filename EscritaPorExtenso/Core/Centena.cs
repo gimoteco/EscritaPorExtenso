@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EscritaPorExtenso.Lib
+namespace EscritaPorExtenso.Core
 {
-    public class Centena : IOrdem
+    internal class Centena : IOrdem
     {
         private static readonly Dictionary<int, string> NomeDosAlgarismos = new Dictionary<int, string>() 
         {

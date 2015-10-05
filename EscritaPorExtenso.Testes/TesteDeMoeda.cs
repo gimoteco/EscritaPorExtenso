@@ -1,7 +1,4 @@
-﻿using System;
-using NUnit.Framework;
-using EscritaPorExtenso.Lib.Moeda;
-using EscritaPorExtenso;
+﻿using NUnit.Framework;
 
 namespace EscritaPorExtenso.Testes
 {

@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.Linq;
 
-namespace EscritaPorExtenso.Lib
+namespace EscritaPorExtenso.Core
 {
-    public class Milhao : IClasse
+    internal class Milhao : IClasse
     {
         private IOrdem Ordem { get; set; }
         private IClasse ClasseAnterior { get; set; }

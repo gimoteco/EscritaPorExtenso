@@ -1,7 +1,8 @@
-﻿using EscritaPorExtenso.Lib;
+﻿using EscritaPorExtenso.Conversor;
+using EscritaPorExtenso.Core;
 using NUnit.Framework;
 
-namespace EscritaPorExtenso.Testes
+namespace EscritaPorExtenso.Testes.Conversor
 {
     [TestFixture]
     public class TesteDoConversor

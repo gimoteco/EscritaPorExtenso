@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace EscritaPorExtenso.Lib
+namespace EscritaPorExtenso.Core
 {
-    public class Unidade : IOrdem
+    internal class Unidade : IOrdem
     {
         private int Algarismo { get; set; }
 

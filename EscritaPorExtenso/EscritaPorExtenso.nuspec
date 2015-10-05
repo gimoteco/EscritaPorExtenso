@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Guilherme Barbosa Ferreira</authors>
+    <owners>Guilherme Barbosa Ferreira</owners>
+    <projectUrl>https://github.com/gimoteco/EscritaPorExtenso</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Suporte para valores até milhões e somente para Reais</releaseNotes>
+    <copyright>Copyleft 2015</copyright>
+    <tags>monetário financeiro extenso valores reais real escrita</tags>
+  </metadata>
+</package>

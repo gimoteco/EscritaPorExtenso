@@ -1,7 +1,7 @@
-using EscritaPorExtenso.Lib;
+﻿using EscritaPorExtenso.Core;
 using NUnit.Framework;
 
-namespace EscritaPorExtenso.Testes
+namespace EscritaPorExtenso.Testes.Classes
 {
     [TestFixture]
     public class TesteDeMilhao

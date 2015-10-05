@@ -5,19 +5,20 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C166C8C6-7CD1-4248-B190-58642BF691E3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>EscritaPorExtenso.Lib</RootNamespace>
-    <AssemblyName>EscritaPorExtenso.Lib</AssemblyName>
+    <RootNamespace>EscritaPorExtenso</RootNamespace>
+    <AssemblyName>EscritaPorExtenso</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -29,6 +30,7 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Centena.cs" />
     <Compile Include="Core\Dezena.cs" />
     <Compile Include="Core\IClasse.cs" />
@@ -43,9 +45,7 @@
     <Compile Include="Moeda\Real.cs" />
     <Compile Include="Extensoes\ExtensoesDeMoeda.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Moeda\" />
-    <Folder Include="Extensoes\" />
+    <Reference Include="System" />
   </ItemGroup>
 </Project>

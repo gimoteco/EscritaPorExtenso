@@ -1,8 +1,9 @@
 ﻿using System;
+using EscritaPorExtenso.Conversor;
 
-namespace EscritaPorExtenso.Lib.Helpers
+namespace EscritaPorExtenso.Helpers
 {
-    public static class ExtensoesDeString
+    internal static class ExtensoesDeString
     {
         public static int ObterDigitoPorOrdemEClasse(this string caracteres, int indiceDaClasse, int indiceDaOrdem)
         {

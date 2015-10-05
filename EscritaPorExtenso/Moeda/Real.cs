@@ -1,8 +1,10 @@
 ﻿using System;
+using EscritaPorExtenso.Conversor;
+using EscritaPorExtenso.Core;
 
-namespace EscritaPorExtenso.Lib.Moeda
+namespace EscritaPorExtenso.Moeda
 {
-    public class Real
+    internal class Real
     {
         IClasse _parteInteira;
         IClasse _parteDecimal;

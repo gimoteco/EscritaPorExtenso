@@ -1,5 +1,5 @@
 ﻿using System;
-using EscritaPorExtenso.Lib.Moeda;
+using EscritaPorExtenso.Moeda;
 
 namespace EscritaPorExtenso
 {

@@ -47,14 +47,10 @@
     <Compile Include="Classes\TesteDeMilhao.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EscritaPorExtenso.Lib\EscritaPorExtenso.Lib.csproj">
+    <ProjectReference Include="..\EscritaPorExtenso\EscritaPorExtenso.csproj">
       <Project>{C166C8C6-7CD1-4248-B190-58642BF691E3}</Project>
-      <Name>EscritaPorExtenso.Lib</Name>
+      <Name>EscritaPorExtenso</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="Ordens\" />
-    <Folder Include="Conversor\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

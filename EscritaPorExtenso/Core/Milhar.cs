@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
 
-namespace EscritaPorExtenso.Lib
+namespace EscritaPorExtenso.Core
 {
-    public class Milhar : IClasse
+    internal class Milhar : IClasse
     {
         private IOrdem Ordens { get; set; }
         private IClasse ClasseAnterior { get; set; }
@@ -35,6 +35,11 @@ namespace EscritaPorExtenso.Lib
             }
 
             return ToString() == obj.ToString();
+        }
+
+        public override int GetHashCode()
+        {
+            return ToString().GetHashCode();
         }
 
         private bool EhDoCasoEspecialDoPrimeiroMilhar
