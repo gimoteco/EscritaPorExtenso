@@ -12,7 +12,7 @@ using EscritaPorExtenso;
 
 # Usando
 ``` csharp
-1.99.PorExtenso(); // Obtém: um real e noventa e nove centavos
+1.99.PorExtenso(); // "um real e noventa e nove centavos"
 ```
 
 Simples assim!
