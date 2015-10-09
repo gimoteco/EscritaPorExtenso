@@ -38,6 +38,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TesteDeInteiro.cs" />
     <Compile Include="TesteDeMoeda.cs" />
     <Compile Include="Ordens\TesteDeCentena.cs" />
     <Compile Include="Ordens\TesteDeDezena.cs" />
