@@ -26,7 +26,7 @@ using EscritaPorExtenso;
 
 //...
 
-1000.PorExtenso(); // "um mil"
+2000.PorExtenso(); // "dois mil"
 ```
 
 Simples assim!
