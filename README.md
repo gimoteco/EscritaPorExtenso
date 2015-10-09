@@ -2,23 +2,31 @@
 [![Total downloads](https://img.shields.io/nuget/dt/EscritaPorExtenso.svg)](https://www.nuget.org/packages/EscritaPorExtenso/)
 [![Versão](https://img.shields.io/nuget/v/EscritaPorExtenso.svg)](https://www.nuget.org/packages/EscritaPorExtenso/)
 
- 	
-
 # Escreva seus valores por extenso
 
 # Instalando
 ``` powershell
 Install-Package EscritaPorExtenso 
 ```
+# Usando
 
-# Importando a biblioteca
+## Para valores monetários em R$
+
 ``` csharp
-using EscritaPorExtenso;
+using EscritaPorExtenso.Moeda;
+
+//... 
+
+1.99.PorExtensoDeReal(); // "um real e noventa e nove centavos"
 ```
 
-# Usando
+## Para valores inteiros
 ``` csharp
-1.99.PorExtenso(); // "um real e noventa e nove centavos"
+using EscritaPorExtenso;
+
+//...
+
+1000.PorExtenso(); // "um mil"
 ```
 
 Simples assim!

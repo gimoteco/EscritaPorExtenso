@@ -13,11 +13,21 @@ namespace EscritaPorExtenso.Conversor
 
         public static IClasse Converter(long numero)
         {
+            ValidarMaximoPermitido(numero);
+
             var digitos = InverterNumero(numero);
             var numeroDeClasses = ObterNumeroDeClasses(digitos);
             var classes = ConstruirClasses(digitos, numeroDeClasses);
 
             return classes;
+        }
+
+        private static void ValidarMaximoPermitido(long valor)
+        {
+            var maximoPermitido = ConversorDeNumeroParaClasses.NumeroDeClasses * 3;
+
+            if (valor.ToString().Length > maximoPermitido)
+                throw new Exception(string.Format("O valor {0} é maior que o suportado pela biblioteca", valor));
         }
 
         private static IClasse ConstruirClasses(string digitos, int numeroDeClasses)

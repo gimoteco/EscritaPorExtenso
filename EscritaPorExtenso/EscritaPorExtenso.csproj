@@ -30,6 +30,7 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <Compile Include="Extensoes\ExtensoesDeNumerosInteiros.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Centena.cs" />
     <Compile Include="Core\Dezena.cs" />

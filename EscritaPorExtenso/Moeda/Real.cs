@@ -14,9 +14,7 @@ namespace EscritaPorExtenso.Moeda
         public Real(decimal valor)
         {
             var numeroDaParteInteira = (long)Math.Truncate(valor);
-
-            ValidarMaximoPermitido(valor, numeroDaParteInteira);
-
+            
             if (numeroDaParteInteira > 0)
             {
                 _parteInteira = ConversorDeNumeroParaClasses.Converter(numeroDaParteInteira);
@@ -35,14 +33,6 @@ namespace EscritaPorExtenso.Moeda
                 _parteDecimal = ConversorDeNumeroParaClasses.Converter(numeroDaParteDecimal);
                 _pluralidadeDecimal = ObterPluralidadeDaParteDecimal(numeroDaParteDecimal);
             }
-        }
-
-        private static void ValidarMaximoPermitido(decimal valor, long numeroDaParteInteira)
-        {
-            var maximoPermitido = ConversorDeNumeroParaClasses.NumeroDeClasses*3;
-
-            if (numeroDaParteInteira.ToString().Length > maximoPermitido)
-                throw new Exception(string.Format("O valor {0} é maior que o suportado pela biblioteca", valor));
         }
 
         private static string ObterPluralidadeDaParteInteira(long parteInteira)
