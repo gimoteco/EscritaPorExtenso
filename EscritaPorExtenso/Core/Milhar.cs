@@ -18,13 +18,21 @@ namespace EscritaPorExtenso.Core
 
         public override string ToString()
         {
-            return EhDoCasoEspecialDoPrimeiroMilhar ? Sufixo : LigaClasses(Ordens + " " + Sufixo, ClasseAnterior);
+            var ehDaPrimeiraUnidade = Ordens.GetType() == typeof (Unidade) && Ordens.Algarismos.First() == 1;
+
+            if (ehDaPrimeiraUnidade)
+                return LigaClasses(Sufixo , ClasseAnterior);
+
+            return LigaClasses(Ordens + " " + Sufixo, ClasseAnterior);
         }
 
         private string LigaClasses(string ordem, IClasse classeAnterior)
         {
-            return (EhDoCasoEspecialDoPrimeiroMilhar ? (ordem + " " + classeAnterior) : ordem)
-                + (EhClasseAnteriorTudoZero ? string.Empty : (" e " + classeAnterior));
+            var numeroDaClasseAnterior = Convert.ToInt64(string.Join(string.Empty, classeAnterior.Algarismos.Select(algarismo => algarismo.ToString())));
+
+            var ehExcecao = numeroDaClasseAnterior % 10 == 0 || numeroDaClasseAnterior < 100;
+            var conjuncao = ehExcecao ? " e " : ", ";
+            return ordem + (EhClasseAnteriorTudoZero ? string.Empty : (conjuncao + classeAnterior));
         }
 
         public override bool Equals(object obj)
