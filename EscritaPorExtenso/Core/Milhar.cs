@@ -3,50 +3,33 @@ using System.Linq;
 
 namespace EscritaPorExtenso.Core
 {
-    internal class Milhar : IClasse
+    internal class Milhar : Classe
     {
-        private IOrdem Ordens { get; set; }
-        private IClasse ClasseAnterior { get; set; }
-        public string Sufixo { get { return "mil"; } }
-        public int[] Algarismos { get { return Ordens.Algarismos.Concat(ClasseAnterior.Algarismos).ToArray(); } }
+        internal override string Sufixo { get { return "mil"; } }
 
-        public Milhar(IOrdem ordem, IClasse classeAnterior = null)
+        public Milhar(IOrdem ordem, Classe classeAnterior = null)
         {
-            Ordens = ordem;
+            Ordem = ordem;
             ClasseAnterior = classeAnterior ?? new PrimeiraClasse(new Centena(0));
         }
 
         public override string ToString()
         {
-            return EhDoCasoEspecialDoPrimeiroMilhar ? Sufixo : LigaClasses(Ordens + " " + Sufixo, ClasseAnterior);
+            if (EhDoCasoEspecialDoPrimeiroMilhar)
+                return LigaClasses(Sufixo, ClasseAnterior);
+
+            return LigaClasses(Ordem + " " + Sufixo, ClasseAnterior);
         }
-
-        private string LigaClasses(string ordem, IClasse classeAnterior)
+        
+        private string LigaClasses(string ordem, Classe classeAnterior)
         {
-            return (EhDoCasoEspecialDoPrimeiroMilhar ? (ordem + " " + classeAnterior) : ordem)
-                + (EhClasseAnteriorTudoZero ? string.Empty : (" e " + classeAnterior));
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (obj == null || GetType() != obj.GetType())
-            {
-                return false;
-            }
-
-            return ToString() == obj.ToString();
-        }
-
-        public override int GetHashCode()
-        {
-            return ToString().GetHashCode();
+            var conjuncao = ObterConjuncao(classeAnterior);
+            return ordem + (EhClasseAnteriorTudoZero ? string.Empty : (conjuncao + classeAnterior));
         }
 
         private bool EhDoCasoEspecialDoPrimeiroMilhar
         {
-            get { return Ordens.Algarismos.First() == 1 && Ordens.Algarismos.Length == 1 && EhClasseAnteriorTudoZero; }
+            get { return Ordem.GetType() == typeof (Unidade) && Ordem.Algarismos.First() == 1; }
         }
-
-        private bool EhClasseAnteriorTudoZero { get { return Array.TrueForAll(ClasseAnterior.Algarismos, algarismo => algarismo == 0); } }
     }
 }

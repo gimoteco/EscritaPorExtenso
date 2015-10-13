@@ -11,7 +11,7 @@ namespace EscritaPorExtenso.Conversor
         private static readonly Type[] _ordens = { typeof(Unidade), typeof(Dezena), typeof(Centena) };
         private static readonly Type[] _classes = { typeof(PrimeiraClasse), typeof(Milhar), typeof(Milhao) };
 
-        public static IClasse Converter(long numero)
+        public static Classe Converter(long numero)
         {
             ValidarMaximoPermitido(numero);
 
@@ -30,15 +30,15 @@ namespace EscritaPorExtenso.Conversor
                 throw new Exception(string.Format("O valor {0} é maior que o suportado pela biblioteca", valor));
         }
 
-        private static IClasse ConstruirClasses(string digitos, int numeroDeClasses)
+        private static Classe ConstruirClasses(string digitos, int numeroDeClasses)
         {
-            IClasse classeAtual = null;
+            Classe classeAtual = null;
 
             for (var indiceDaClasse = 0; indiceDaClasse < numeroDeClasses; indiceDaClasse++)
             {
                 var tipoClasseAtual = _classes[indiceDaClasse];
                 var ordens = ConstruirOrdens(digitos, indiceDaClasse);
-                classeAtual = tipoClasseAtual.Construir<IClasse>(ordens, classeAtual);
+                classeAtual = tipoClasseAtual.Construir<Classe>(ordens, classeAtual);
             }
             return classeAtual;
         }

@@ -12,7 +12,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -34,7 +34,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Centena.cs" />
     <Compile Include="Core\Dezena.cs" />
-    <Compile Include="Core\IClasse.cs" />
     <Compile Include="Core\IOrdem.cs" />
     <Compile Include="Core\Milhao.cs" />
     <Compile Include="Core\Milhar.cs" />
@@ -45,6 +44,7 @@
     <Compile Include="Helpers\ExtensoesDeType.cs" />
     <Compile Include="Moeda\Real.cs" />
     <Compile Include="Extensoes\ExtensoesDeMoeda.cs" />
+    <Compile Include="Core\Classe.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

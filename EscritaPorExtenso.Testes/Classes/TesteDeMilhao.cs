@@ -33,7 +33,7 @@ namespace EscritaPorExtenso.Testes.Classes
         [Test]
         public void DeveGerarNumero1111e3()
         {
-            Assert.AreEqual("um milhão e cento e onze mil", new Milhao(new Unidade(1), new Milhar(new Centena(1, new Dezena(1, new Unidade(1))))).ToString());
+            Assert.AreEqual("um milhão, cento e onze mil", new Milhao(new Unidade(1), new Milhar(new Centena(1, new Dezena(1, new Unidade(1))))).ToString());
         }
     }
 }

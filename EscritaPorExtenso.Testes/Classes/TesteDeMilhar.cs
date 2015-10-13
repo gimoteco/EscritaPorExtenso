@@ -43,7 +43,7 @@ namespace EscritaPorExtenso.Testes.Classes
 
             var porExtenso = numero.ToString();
 
-            Assert.AreEqual("um mil e novecentos e oitenta e quatro", porExtenso);
+            Assert.AreEqual("mil, novecentos e oitenta e quatro", porExtenso);
         }
     }
 }
