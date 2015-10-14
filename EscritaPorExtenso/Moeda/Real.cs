@@ -6,8 +6,8 @@ namespace EscritaPorExtenso.Moeda
 {
     internal class Real
     {
-        IClasse _parteInteira;
-        IClasse _parteDecimal;
+        Classe _parteInteira;
+        Classe _parteDecimal;
         private string _pluralidadeInteira;
         private string _pluralidadeDecimal;
 
