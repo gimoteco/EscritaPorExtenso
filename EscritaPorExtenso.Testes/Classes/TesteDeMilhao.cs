@@ -7,15 +7,21 @@ namespace EscritaPorExtenso.Testes.Classes
     public class TesteDeMilhao
     {
         [Test]
-        public void DeveGerarNumeroUmMilhao()
+        [TestCase("um milhão", 1)]
+        [TestCase("cinco milhões", 5)]
+        [TestCase("nove milhões", 9)]
+        public void DeveEscreverPorExtensoUnidadeDeMilhao(string numeroPorExtenso, int unidade)
         {
-            Assert.AreEqual("um milhão", new Milhao(new Unidade(1)).ToString());
+            Assert.AreEqual(numeroPorExtenso, new Milhao(new Unidade(unidade)).ToString());
         }
 
         [Test]
-        public void DeveGerarNumeroDezMilhoes()
+        [TestCase("dez milhões", 1)]
+        [TestCase("vinte milhões", 2)]
+        [TestCase("noventa milhões", 9)]
+        public void DeveEscreverPorExtensoDezenaDeMilhao(string numeroPorExtenso, int dezena)
         {
-            Assert.AreEqual("dez milhões", new Milhao(new Dezena(1)).ToString());
+            Assert.AreEqual(numeroPorExtenso, new Milhao(new Dezena(dezena)).ToString());
         }
 
         [Test]
