@@ -1,5 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/nkdw5ed1m10fyrl2?svg=true)](https://ci.appveyor.com/project/gimoteco/escritaporextenso)
 [![Total downloads](https://img.shields.io/nuget/dt/EscritaPorExtenso.svg)](https://www.nuget.org/packages/EscritaPorExtenso/)
+[![Coverage Status](https://coveralls.io/repos/gimoteco/EscritaPorExtenso/badge.svg?branch=opencover&service=github)](https://coveralls.io/github/gimoteco/EscritaPorExtenso?branch=opencover)
 [![Versão](https://img.shields.io/nuget/v/EscritaPorExtenso.svg)](https://www.nuget.org/packages/EscritaPorExtenso/)
 
 # Escreva seus valores por extenso
