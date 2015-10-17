@@ -1,19 +1,16 @@
-version: 1.0.{build}
-skip_tags: true
+version: '#{build}'
 configuration: Release
-assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{version}'
-environment:
-  COVERALLS_REPO_TOKEN: ZTRrJXsUFBCrJ8gApoaTFS6fMRSI7OW1X
-before_build:
-  - nuget restore ".\EscritaPorExtenso.sln"
 build:
-  project: .\EscritaPorExtenso.sln
+  project: EscritaPorExtenso.sln
+  publish_nuget: true
   verbosity: minimal
+deploy:
+- provider: NuGet
+  api_key:
+    secure: 5rJTzHnpkaJ/FIYFCJ1VZ6zzVVQaLXk5dszt8Up1cbQcKAK3GVlVOU0BRtBr1Mzh
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: JAgAiZQTZdWLL5ZPv18WI+uWChs26/bT6bZCLFde/5v7KeCtlUs9DlsknMRM+1xi
 test_script:
 - ps: >-
     .\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user -target:nunit-console.exe -register:user "-targetargs:""EscritaPorExtenso.Testes\bin\$env:CONFIGURATION\EscritaPorExtenso.Testes.dll"" /noshadow" -filter:"+[EscritaPorExtenso*]*" -filter:"-[EscritaPorExtenso.Testes]*" -output:opencoverCoverage.xml
