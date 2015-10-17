@@ -5,7 +5,8 @@ namespace EscritaPorExtenso.Core
 {
     internal abstract class Classe
     {
-        virtual internal string Sufixo { get { return null; } }
+        
+        virtual internal string Sufixo { get; }
         virtual protected Classe ClasseAnterior { get; set; }
         protected IOrdem Ordem { get; set; }
         internal int[] Algarismos { get { return Ordem.Algarismos; } }
