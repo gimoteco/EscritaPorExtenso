@@ -2,6 +2,13 @@
 
 namespace EscritaPorExtenso.Moeda
 {
+    public static class ExtensoesDePorcentagem
+    {
+        public static string PorExtensoDePorcentagem(this int valor)
+        {
+            return valor.PorExtenso() + " por cento";
+        }
+    }
     public static class ExtensoesDeMoeda
     {
         public static string PorExtensoDeReal(this double valor)
