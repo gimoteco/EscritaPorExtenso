@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace EscritaPorExtenso.Testes
 {
@@ -9,6 +10,18 @@ namespace EscritaPorExtenso.Testes
         public void DeveEscreverUmNumeroInteiro()
         {
             Assert.AreEqual("dois mil", 2000.PorExtenso());
+        }
+
+        [Test]
+        public void DeveEscreverUmNumeroInteiroShort()
+        {
+            Assert.AreEqual("um", Int16.Parse("1").PorExtenso());
+        }
+
+        [Test]
+        public void DeveEscreverUmNumeroInteiroLong()
+        {
+            Assert.AreEqual("dois mil", 2000L.PorExtenso());
         }
     }
 }
