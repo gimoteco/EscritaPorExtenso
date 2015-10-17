@@ -39,6 +39,30 @@ namespace EscritaPorExtenso.Testes
         }
 
         [Test]
+        public void DeveEscreverNumeroSomenteComCentavosDecimal()
+        {
+            Assert.AreEqual("noventa e nove centavos", 0.99m.PorExtensoDeReal());
+        }
+
+        [Test]
+        public void DeveEscreverNumeroSomenteComCentavosFloat()
+        {
+            Assert.AreEqual("noventa e nove centavos", 0.99f.PorExtensoDeReal());
+        }
+
+        [Test]
+        public void DeveEscreverNumeroSomenteComCentavosInt()
+        {
+            Assert.AreEqual("nove reais", 9.PorExtensoDeReal());
+        }
+
+        [Test]
+        public void DeveEscreverNumeroSomenteComCentavosLong()
+        {
+            Assert.AreEqual("um real", 1L.PorExtensoDeReal());
+        }
+
+        [Test]
         public void DeveEscreverNumero1000()
         {
             Assert.AreEqual("mil reais", 1000.PorExtensoDeReal());
