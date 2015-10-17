@@ -16,6 +16,21 @@ namespace EscritaPorExtenso.Testes.Classes
         }
 
         [Test]
+        public void ObjetosDiferentesDevemSerDiferentes()
+        {
+            Assert.IsFalse(new Milhao(new Unidade(1)).Equals(1));
+        }
+
+        [Test]
+        public void HashcodeDaClasseDeveSerONumeroPorExtenso()
+        {
+            var umMilhao = new Milhao(new Unidade(1));
+
+            Assert.AreEqual(umMilhao.GetHashCode(), umMilhao.ToString().GetHashCode());
+        }
+
+        // TODO: Remover anotação test
+        [Test]
         [TestCase("dez milhões", 1)]
         [TestCase("vinte milhões", 2)]
         [TestCase("noventa milhões", 9)]
