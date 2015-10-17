@@ -1,5 +1,7 @@
 version: '#{build}'
 configuration: Release
+before_build:
+  - nuget restore ".\EscritaPorExtenso.sln"
 build:
   project: EscritaPorExtenso.sln
   publish_nuget: true
