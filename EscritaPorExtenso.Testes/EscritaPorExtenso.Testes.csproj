@@ -29,8 +29,7 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.3">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -46,6 +45,7 @@
     <Compile Include="Conversor\TesteDoConversor.cs" />
     <Compile Include="Classes\TesteDeMilhar.cs" />
     <Compile Include="Classes\TesteDeMilhao.cs" />
+    <Compile Include="TesteDePorcentagem.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EscritaPorExtenso\EscritaPorExtenso.csproj">
