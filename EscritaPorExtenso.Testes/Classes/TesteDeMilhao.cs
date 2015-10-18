@@ -6,7 +6,6 @@ namespace EscritaPorExtenso.Testes.Classes
     [TestFixture]
     public class TesteDeMilhao
     {
-        [Test]
         [TestCase("um milhão", 1)]
         [TestCase("cinco milhões", 5)]
         [TestCase("nove milhões", 9)]
@@ -29,8 +28,6 @@ namespace EscritaPorExtenso.Testes.Classes
             Assert.AreEqual(umMilhao.GetHashCode(), umMilhao.ToString().GetHashCode());
         }
 
-        // TODO: Remover anotação test
-        [Test]
         [TestCase("dez milhões", 1)]
         [TestCase("vinte milhões", 2)]
         [TestCase("noventa milhões", 9)]

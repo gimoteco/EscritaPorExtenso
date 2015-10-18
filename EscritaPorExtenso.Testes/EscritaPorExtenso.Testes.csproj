@@ -46,6 +46,7 @@
     <Compile Include="Classes\TesteDeMilhar.cs" />
     <Compile Include="Classes\TesteDeMilhao.cs" />
     <Compile Include="TesteDePorcentagem.cs" />
+    <Compile Include="Classes\TesteDePrimeiraClasse.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EscritaPorExtenso\EscritaPorExtenso.csproj">
