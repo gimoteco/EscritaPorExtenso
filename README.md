@@ -37,7 +37,7 @@ using EscritaPorExtenso.Porcentagem;
 //...
 
 95.PorExtensoDePorcentagem(); // "noventa e cinto por cento"
-(85.74).PorExtensoDePorcentagem(); // "oitenta e cinco vírgula setenta e quatro por cento"
+85.74.PorExtensoDePorcentagem(); // "oitenta e cinco vírgula setenta e quatro por cento"
 ```
 
 Simples assim!
