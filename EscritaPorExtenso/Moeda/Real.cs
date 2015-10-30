@@ -4,7 +4,7 @@ using EscritaPorExtenso.Core;
 
 namespace EscritaPorExtenso.Moeda
 {
-    internal class Real
+    public class Real
     {
         Classe _parteInteira;
         Classe _parteDecimal;

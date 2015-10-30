@@ -69,6 +69,12 @@ namespace EscritaPorExtenso.Testes
         }
 
         [Test]
+        public void DeveFuncionarParaNumerosComAcentos()
+        {
+            Assert.AreEqual("três reais", 3.PorExtensoDeReal());
+        }
+
+        [Test]
         public void ZeroDeveSerSingular() 
         {
             // + info em http://vestibular.uol.com.br/pegadinhas/ult1796u122.jhtm

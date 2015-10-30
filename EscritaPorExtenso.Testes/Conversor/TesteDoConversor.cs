@@ -1,5 +1,7 @@
-﻿using EscritaPorExtenso.Conversor;
+﻿using System;
+using EscritaPorExtenso.Conversor;
 using EscritaPorExtenso.Core;
+using EscritaPorExtenso.Moeda;
 using NUnit.Framework;
 
 namespace EscritaPorExtenso.Testes.Conversor
@@ -75,6 +77,15 @@ namespace EscritaPorExtenso.Testes.Conversor
             Assert.AreEqual(new Milhar(new Centena(9, new Dezena(9, new Unidade(9))), new PrimeiraClasse(new Centena(9, new Dezena(9, new Unidade(9))))), convertido);
         }
 
+        [Test]
+        public void NaoDeveConverterNumeroMaiorQueOSuportado()
+        {
+            var numeroMaiorQueOMaximo = Convert.ToInt64(new string('9', ConversorDeNumeroParaClasses.NumeroDeClasses * 3 + 1));
+
+            var excecao = Assert.Throws<Exception>(() => ConversorDeNumeroParaClasses.Converter(numeroMaiorQueOMaximo));
+            Assert.AreEqual(string.Format("O valor {0} é maior que o suportado pela biblioteca", numeroMaiorQueOMaximo), excecao.Message);
+        }
+
         public void DeveConverterCentenaDeMilhar()
         {
             var convertido = ConversorDeNumeroParaClasses.Converter(100000);
@@ -88,5 +99,6 @@ namespace EscritaPorExtenso.Testes.Conversor
 
             Assert.AreEqual(new Milhao(new Unidade(1)), convertido);
         }
+
     }
 }
