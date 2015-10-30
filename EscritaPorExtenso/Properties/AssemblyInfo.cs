@@ -1,11 +1,10 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyVersion("0.1.1")]
-[assembly: AssemblyFileVersion("0.1.1")]
-[assembly: AssemblyInformationalVersion("0.1.1")]
+[assembly: AssemblyVersion("0.2.0")]
+[assembly: AssemblyFileVersion("0.2.0")]
+[assembly: AssemblyInformationalVersion("0.2.0")]
 [assembly: AssemblyTitle("Escrita por extenso")]
-[assembly: AssemblyDescription("Correção na separação de classes numéricas\nTratamentos das exceções na ligação de classes")]
+[assembly: AssemblyDescription("Escreva os seus números por extenso")]
 [assembly: AssemblyCompany("Guilherme Barbosa Ferreira")]
-
 [assembly: InternalsVisibleTo("EscritaPorExtenso.Testes")]
