@@ -56,10 +56,5 @@ namespace EscritaPorExtenso.Porcentagem
 
             return parteInteira + " por cento";
         }
-
-        public string EscreverPorCento(string valor)
-        {
-            return valor + " por cento";
-        }
     }
 }

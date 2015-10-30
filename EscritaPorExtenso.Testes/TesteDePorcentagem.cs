@@ -13,6 +13,7 @@ namespace EscritaPorExtenso.Testes
          */
 
         [Test]
+        [TestCase(0, Result="zero por cento")]
         [TestCase(35, Result="trinta e cinco por cento")]
         [TestCase(1000, Result="mil por cento")]
         [TestCase(1000000, Result="um milhão por cento")]
