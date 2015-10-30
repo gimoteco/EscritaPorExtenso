@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EscritaPorExtenso.Moeda
+namespace EscritaPorExtenso.Porcentagem
 {
     public static class ExtensoesDePorcentagem
     {

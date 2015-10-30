@@ -2,7 +2,7 @@
 using EscritaPorExtenso.Conversor;
 using EscritaPorExtenso.Core;
 
-namespace EscritaPorExtenso.Moeda
+namespace EscritaPorExtenso.Porcentagem
 {
     public class Porcentagem
     {

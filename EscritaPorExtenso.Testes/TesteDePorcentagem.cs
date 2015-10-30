@@ -1,7 +1,7 @@
 ﻿using System;
 using EscritaPorExtenso.Conversor;
+using EscritaPorExtenso.Porcentagem;
 using NUnit.Framework;
-using EscritaPorExtenso.Moeda;
 
 namespace EscritaPorExtenso.Testes
 {
