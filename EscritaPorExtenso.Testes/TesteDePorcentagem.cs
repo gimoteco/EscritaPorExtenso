@@ -1,7 +1,7 @@
 ﻿using System;
 using EscritaPorExtenso.Conversor;
+using EscritaPorExtenso.Porcentagem;
 using NUnit.Framework;
-using EscritaPorExtenso.Moeda;
 
 namespace EscritaPorExtenso.Testes
 {
@@ -11,6 +11,7 @@ namespace EscritaPorExtenso.Testes
     [TestFixture]
     public class TesteDePorcentagem
     {
+        [TestCase(0, Result="zero por cento")]
         [TestCase(35, Result="trinta e cinco por cento")]
         [TestCase(1000, Result="mil por cento")]
         [TestCase(1000000, Result="um milhão por cento")]
@@ -19,7 +20,6 @@ namespace EscritaPorExtenso.Testes
             return valor.PorExtensoDePorcentagem();
         }
 
-        [Test]
         [TestCase(35, Result = "trinta e cinco por cento")]
         [TestCase(1000, Result = "mil por cento")]
         [TestCase(1000000, Result = "um milhão por cento")]

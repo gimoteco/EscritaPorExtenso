@@ -2,7 +2,7 @@
 using EscritaPorExtenso.Conversor;
 using EscritaPorExtenso.Core;
 
-namespace EscritaPorExtenso.Moeda
+namespace EscritaPorExtenso.Porcentagem
 {
     public class Porcentagem
     {
@@ -55,11 +55,6 @@ namespace EscritaPorExtenso.Moeda
                 return  string.Format("{0} vírgula {1} por cento", parteInteira, _parteDecimal);
 
             return parteInteira + " por cento";
-        }
-
-        public string EscreverPorCento(string valor)
-        {
-            return valor + " por cento";
         }
     }
 }

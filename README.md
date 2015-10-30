@@ -30,4 +30,14 @@ using EscritaPorExtenso;
 2000.PorExtenso(); // "dois mil"
 ```
 
+## Para porcentagem
+``` csharp
+using EscritaPorExtenso.Porcentagem;
+
+//...
+
+95.PorExtensoDePorcentagem(); // "noventa e cinto por cento"
+(85.74).PorExtensoDePorcentagem(); // "oitenta e cinco vírgula setenta e quatro por cento"
+```
+
 Simples assim!

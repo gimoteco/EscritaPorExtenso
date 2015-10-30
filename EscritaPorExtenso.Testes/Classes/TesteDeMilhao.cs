@@ -21,6 +21,19 @@ namespace EscritaPorExtenso.Testes.Classes
         }
 
         [Test]
+        public void DeveSerDiferenteSeObjetoForNulo()
+        {
+            Assert.IsFalse(new Milhao(new Unidade(1)).Equals(null));
+        }
+
+        [Test]
+        public void DeveSerIgual()
+        {
+            var milhao = new Milhao(new Unidade(1));
+            Assert.IsTrue(new Milhao(new Unidade(1)).Equals(milhao));
+        }
+
+        [Test]
         public void HashcodeDaClasseDeveSerONumeroPorExtenso()
         {
             var umMilhao = new Milhao(new Unidade(1));
