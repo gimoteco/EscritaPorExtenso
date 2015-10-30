@@ -4,7 +4,7 @@ using EscritaPorExtenso.Core;
 
 namespace EscritaPorExtenso.Porcentagem
 {
-    public class Porcentagem
+    internal class Porcentagem
     {
         Classe _parteInteira;
         Classe _parteDecimal;
