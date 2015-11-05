@@ -2,9 +2,8 @@ using System.Collections.Generic;
 
 namespace EscritaPorExtenso.Core
 {
-    internal class Unidade : IOrdem
+    internal class Unidade : Ordem
     {
-        private int Algarismo { get; set; }
 
         private static readonly Dictionary<int, string> _nomeDosAlgarismos = new Dictionary<int, string>()
         {
@@ -14,7 +13,7 @@ namespace EscritaPorExtenso.Core
         };
 
 
-        public Unidade(int algarismo, IOrdem anterior = null)
+        public Unidade(int algarismo, Ordem anterior = null)
         {
             Algarismo = algarismo;
         }
@@ -24,7 +23,7 @@ namespace EscritaPorExtenso.Core
             return _nomeDosAlgarismos[Algarismo];
         }
 
-        public int[] Algarismos
+        public override int[] Algarismos
         {
             get { return new[] { Algarismo }; }
         }

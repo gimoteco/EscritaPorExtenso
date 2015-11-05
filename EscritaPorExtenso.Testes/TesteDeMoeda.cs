@@ -23,7 +23,13 @@ namespace EscritaPorExtenso.Testes
         [Test]
         public void DeveEscreverNumeroComCentavoSingular()
         {
-            Assert.AreEqual("um real e um centavo", 1.01.PorExtensoDeReal());
+            Assert.AreEqual("um real e um centavo", 1.01m.PorExtensoDeReal());
+        }
+
+        [Test]
+        public void DeveEscreverSemConjuncaoQuandoAlgumAlgarismoForZero()
+        {
+            Assert.AreEqual("cento e oito reais", 108.PorExtensoDeReal());
         }
 
         [Test]

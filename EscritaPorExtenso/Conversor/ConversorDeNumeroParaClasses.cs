@@ -43,14 +43,14 @@ namespace EscritaPorExtenso.Conversor
             return classeAtual;
         }
 
-        private static IOrdem ConstruirOrdens(string digitos, int indiceDaClasse)
+        private static Ordem ConstruirOrdens(string digitos, int indiceDaClasse)
         {
-            IOrdem ordemAtual = null;
+            Ordem ordemAtual = null;
             for (var indiceDaOrdem = 0; indiceDaOrdem < ObterNumeroDeOrdens(digitos, indiceDaClasse); indiceDaOrdem++)
             {
                 var tipoOrdemAtual = _ordens[indiceDaOrdem];
                 var digitoParaEncapsular = digitos.ObterDigitoPorOrdemEClasse(indiceDaClasse, indiceDaOrdem);
-                ordemAtual = tipoOrdemAtual.Construir<IOrdem>(digitoParaEncapsular, ordemAtual);
+                ordemAtual = tipoOrdemAtual.Construir<Ordem>(digitoParaEncapsular, ordemAtual);
             }
             return ordemAtual;
         }

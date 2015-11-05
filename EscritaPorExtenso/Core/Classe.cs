@@ -7,7 +7,7 @@ namespace EscritaPorExtenso.Core
     {
         abstract internal string Sufixo { get; }
         virtual protected Classe ClasseAnterior { get; set; }
-        protected IOrdem Ordem { get; set; }
+        protected Ordem Ordem { get; set; }
         internal int[] Algarismos { get { return Ordem.Algarismos; } }
 
         protected bool EhSingular { get { return Algarismos.Last() == 1 && Algarismos.Length == 1; } }
@@ -35,6 +35,15 @@ namespace EscritaPorExtenso.Core
             }
 
             return ToString() == obj.ToString();
+        }
+
+        protected string LigaClasses(string ordem, Classe classeAnterior)
+        {
+            var conjuncao = ObterConjuncao(classeAnterior);
+            var deveColocarConjuncao = classeAnterior.Algarismos.Take(1).First() != 0;
+            var classeAnteriorPorExtenso = ((deveColocarConjuncao ? conjuncao : string.Empty) + classeAnterior);
+
+            return ordem + (EhClasseAnteriorTudoZero ? string.Empty : classeAnteriorPorExtenso);
         }
 
         public override int GetHashCode()

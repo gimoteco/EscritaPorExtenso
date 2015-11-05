@@ -12,6 +12,16 @@ namespace EscritaPorExtenso.Testes
             Assert.AreEqual("dois mil", 2000.PorExtenso());
         }
 
+        [TestCase("cento e oito", 108)]
+        [TestCase("mil e oitenta", 1080)]
+        [TestCase("dez mil e noventa", 10090)]
+        [TestCase("dez mil, cento e noventa e dois", 10192)]
+        [TestCase("dez mil e dois", 10002)]
+        public void DeveEscreverSemConjuncaoQuandoAlgumAlgarismoForZero(string numeroPorExtensoEsperado, int numero)
+        {
+            Assert.AreEqual(numeroPorExtensoEsperado, numero.PorExtenso());
+        }
+
         [Test]
         public void DeveEscreverUmNumeroInteiroShort()
         {

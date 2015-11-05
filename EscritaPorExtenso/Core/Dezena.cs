@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace EscritaPorExtenso.Core
 {
-    internal class Dezena : IOrdem
+    internal class Dezena : Ordem
     {
         private static readonly Dictionary<int, string> NomeDosAlgarismos = new Dictionary<int, string>()
         {
@@ -18,10 +18,9 @@ namespace EscritaPorExtenso.Core
             {4, "quatorze"}, {5, "quinze"}, {6, "dezeseis"},
             {7, "dezesete"}, {8, "dezoito"}, {9, "dezenove"},
         };
-        private IOrdem OrdemAnterior { get; set; }
-        private int Algarismo { get; set; }
+        
 
-        public Dezena(int algarismo, IOrdem ordemAnterior = null)
+        public Dezena(int algarismo, Ordem ordemAnterior = null)
         {
             OrdemAnterior = ordemAnterior ?? new Unidade(0);
             Algarismo = algarismo;
@@ -29,25 +28,12 @@ namespace EscritaPorExtenso.Core
 
         public override string ToString()
         {
-            return EhDoCasoEspecialDeDezADezenove
+            return EhDoCasoEspecial
                 ? NomeDosAlgarismosDaPrimeiraDezena[OrdemAnterior.Algarismos.First()]
                 : LigaOrdens(NomeDosAlgarismos[Algarismo], OrdemAnterior);
         }
 
-        private static string LigaOrdens(string nomeDoAlgarismo, IOrdem ordemAnterior)
-        {
-            return nomeDoAlgarismo + ((ordemAnterior.Algarismos.First() == 0) ? string.Empty : (" e " + ordemAnterior));
-        }
-
-        private bool EhDoCasoEspecialDeDezADezenove
-        {
-            get { return Algarismo == 1 && Algarismos.Sum() > 1; }
-        }
-
-        public int[] Algarismos
-        {
-            get { return new[] { Algarismo }.Concat(OrdemAnterior.Algarismos).ToArray(); }
-        }
+        
 
     }
 }

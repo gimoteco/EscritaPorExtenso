@@ -4,7 +4,7 @@ namespace EscritaPorExtenso.Core
     {
         internal override string Sufixo { get { return string.Empty; }}
 
-        public PrimeiraClasse(IOrdem ordem, Classe classeAnterior = null)
+        public PrimeiraClasse(Ordem ordem, Classe classeAnterior = null)
         {
             Ordem = ordem;
         }

@@ -6,7 +6,7 @@ namespace EscritaPorExtenso.Core
     {
         internal override string Sufixo { get { return EhSingular ? "milhão" : "milhões"; } }
 
-        public Milhao(IOrdem ordem, Classe classeAnterior = null)
+        public Milhao(Ordem ordem, Classe classeAnterior = null)
         {
             Ordem = ordem;
             ClasseAnterior = classeAnterior ?? new Milhar(new Centena(0));
@@ -14,8 +14,8 @@ namespace EscritaPorExtenso.Core
 
         public override string ToString()
         {
-            var conjuncao = ObterConjuncao(ClasseAnterior);
-            return Ordem + " " + Sufixo + (EhClasseAnteriorTudoZero ? String.Empty : (conjuncao + ClasseAnterior));
+            var ordem = Ordem + " " + Sufixo;
+            return LigaClasses(ordem, ClasseAnterior);
         }
     }
 }
