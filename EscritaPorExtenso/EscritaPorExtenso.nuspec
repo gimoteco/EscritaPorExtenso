@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/gimoteco/EscritaPorExtenso</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Suporte para escrita por extenso de porcentagem</releaseNotes>
+    <releaseNotes>Correções de bugs na junção de classes e ordens</releaseNotes>
     <copyright>Copyleft 2015</copyright>
     <tags>monetário financeiro porcentagem extenso valores reais real escrita</tags>
   </metadata>
