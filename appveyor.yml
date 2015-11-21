@@ -5,6 +5,7 @@ before_build:
 build:
   project: EscritaPorExtenso.sln
   publish_nuget: true
+  publish_wap: true
   verbosity: minimal
 deploy:
 - provider: NuGet
