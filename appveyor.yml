@@ -12,9 +12,9 @@ deploy:
   api_key:
     secure: 5rJTzHnpkaJ/FIYFCJ1VZ6zzVVQaLXk5dszt8Up1cbQcKAK3GVlVOU0BRtBr1Mzh
 - provider: WebDeploy
-  server: escreverporextenso.scm.azurewebsites.net:443
+  server: https://escreverporextenso.scm.azurewebsites.net:443/msdeploy.axd?site=ESCREVERPOREXTENSO
   website: ESCREVERPOREXTENSO
-  username: ESCREVERPOREXTENSO\gimoteco
+  username: $ESCREVERPOREXTENSO
   password:
     secure: SLMdNXjNkAyGu6k6nDGLLEp2mcI5Qj4NhzGDBWnlL+jlwe8+fU+0PwqzGYSkKBzsAR6CXeJ3zbpNVbuqnbuZYw==
   app_offline: false
