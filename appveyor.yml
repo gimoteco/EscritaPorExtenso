@@ -10,6 +10,13 @@ deploy:
 - provider: NuGet
   api_key:
     secure: 5rJTzHnpkaJ/FIYFCJ1VZ6zzVVQaLXk5dszt8Up1cbQcKAK3GVlVOU0BRtBr1Mzh
+- provider: WebDeploy
+  server: escreverporextenso.scm.azurewebsites.net
+  website: ESCREVERPOREXTENSO
+  username: gimoteco
+  password:
+    secure: FOZtDdpyLplKl59g63e5+w==
+  app_offline: false
 environment:
   COVERALLS_REPO_TOKEN:
     secure: JAgAiZQTZdWLL5ZPv18WI+uWChs26/bT6bZCLFde/5v7KeCtlUs9DlsknMRM+1xi
