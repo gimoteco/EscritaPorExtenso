@@ -17,7 +17,6 @@ deploy:
   username: ESCREVERPOREXTENSO\gimoteco
   password:
     secure: SLMdNXjNkAyGu6k6nDGLLEp2mcI5Qj4NhzGDBWnlL+jlwe8+fU+0PwqzGYSkKBzsAR6CXeJ3zbpNVbuqnbuZYw==
-  ntlm: true
   app_offline: false
 environment:
   COVERALLS_REPO_TOKEN:
