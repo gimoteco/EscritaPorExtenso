@@ -8,7 +8,7 @@ namespace EscritaPorExtenso.Api.Controllers
         public IHttpActionResult Get(int numero)
         {
             var numeroPorExtenso = numero.PorExtenso();
-            return Ok(numeroPorExtenso);
+            return Ok(new { NumeroPorExtenso = numeroPorExtenso });
         }
     }
 }
