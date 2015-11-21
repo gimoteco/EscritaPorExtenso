@@ -14,7 +14,7 @@ deploy:
 - provider: WebDeploy
   server: escreverporextenso.scm.azurewebsites.net:443
   website: ESCREVERPOREXTENSO
-  username: $ESCREVERPOREXTENSO
+  username: gimoteco
   password:
     secure: SLMdNXjNkAyGu6k6nDGLLEp2mcI5Qj4NhzGDBWnlL+jlwe8+fU+0PwqzGYSkKBzsAR6CXeJ3zbpNVbuqnbuZYw==
   ntlm: true
