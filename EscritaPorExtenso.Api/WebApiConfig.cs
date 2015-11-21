@@ -8,7 +8,7 @@ namespace EscritaPorExtenso.Api
     {
         public static void Register(HttpConfiguration config)
         {
-            var cors = new EnableCorsAttribute("*", "*", "*");
+            var cors = new EnableCorsAttribute("http://gimoteco.github.io", "*", "*");
             config.EnableCors(cors);
 
             config.MapHttpAttributeRoutes();
