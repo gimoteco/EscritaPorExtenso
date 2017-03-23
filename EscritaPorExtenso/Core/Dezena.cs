@@ -15,8 +15,8 @@ namespace EscritaPorExtenso.Core
         private static readonly Dictionary<int, string> NomeDosAlgarismosDaPrimeiraDezena = new Dictionary<int, string>()
         {
             {1, "onze"}, {2, "doze"}, {3, "treze"},
-            {4, "quatorze"}, {5, "quinze"}, {6, "dezeseis"},
-            {7, "dezesete"}, {8, "dezoito"}, {9, "dezenove"},
+            {4, "quatorze"}, {5, "quinze"}, {6, "dezesseis"},
+            {7, "dezessete"}, {8, "dezoito"}, {9, "dezenove"},
         };
         
 
