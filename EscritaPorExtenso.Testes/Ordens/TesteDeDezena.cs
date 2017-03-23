@@ -17,6 +17,8 @@ namespace EscritaPorExtenso.Testes.Ordens
         {
             Assert.AreEqual("onze", new Dezena(1, new Unidade(1)).ToString());
             Assert.AreEqual("doze", new Dezena(1, new Unidade(2)).ToString());
+            Assert.AreEqual("dezesseis", new Dezena(1, new Unidade(6)).ToString());
+            Assert.AreEqual("dezessete", new Dezena(1, new Unidade(7)).ToString());
             Assert.AreEqual("dezenove", new Dezena(1, new Unidade(9)).ToString());
         }
 
